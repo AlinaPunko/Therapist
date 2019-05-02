@@ -1,0 +1,65 @@
+﻿<Window x:Class="Therapist.View.EditDoctorForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Therapist"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="LoginForm" Height="450" MouseDown="EditDoctorForm_MouseDown" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition Width="35"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition/>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="33"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="19"/>
+        </Grid.RowDefinitions>
+        <Rectangle RadiusX="15" RadiusY="15" Grid.ColumnSpan="8"  Grid.RowSpan="11" />
+        <Image Grid.Column="4" Name="img1" Source="/Picture/doctor (2).png"  Grid.Row="2" Grid.RowSpan="1" />
+        <Label Content="Данные Доктора" FontFamily="Segoe UI Black" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Grid.ColumnSpan="3" Height="38" Width="178" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" />
+
+        <Label x:Name="label6" Foreground="Black" Content="№." Grid.Column="2" Grid.Row="3" Height="27" Width="18" Margin="1,0,0,0"/>
+        <Label x:Name="labelId" Foreground="Black" Content="0" Grid.Column="3"  Grid.Row="3" Height="27" Width="16" Margin="1,0,3,0"/>
+        <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="Blue" Margin="4,4,0,3" Height="26" Width="25" Grid.Column="1" Grid.Row="4"/>
+        <TextBox x:Name="textBoxName" BorderBrush="Blue" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя" Foreground="Black"  Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="3" Height="34" VerticalAlignment="Bottom" Margin="0,0,34,0" Grid.RowSpan="2"/>
+        <Label x:Name="label7" Foreground="Black" Content="*" Grid.Column="7" Grid.Row="4" Height="26" Margin="10,0" Width="15" />
+
+        <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Foreground="Blue" Margin="4,9,0,2" Height="24" Width="25" Grid.Column="1" Grid.Row="5"/>
+        <TextBox x:Name="textBoxPhone" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Телефон" Foreground="Black" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="5" Margin="0,0,34,0"/>
+
+        <materialDesign:PackIcon Kind="SecurityHome" VerticalAlignment="Center" Foreground="Blue" Margin="4,6,0,8" Grid.Column="1" Grid.Row="6" Height="24" Width="25" RenderTransformOrigin="0.419,0.8"/>
+        <TextBox x:Name="textBoxAddress" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Адрес" Foreground="Black" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="6" Margin="0,0,34,0"/>
+
+        <materialDesign:PackIcon Kind="School" VerticalAlignment="Center" Foreground="Blue" Margin="4,6,0,6" Grid.Column="1" Grid.Row="7" Height="26" Width="25"/>
+        <TextBox x:Name="textBoxSkills" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Квалификация" Foreground="Black" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="7" Margin="0,0,34,0"/>
+
+
+
+        <WrapPanel Grid.ColumnSpan="6" Grid.Column="1"  Grid.Row="9">
+            <Button x:Name="buttonSave" Content="Сохранить" ToolTip="Записать"  FontSize="18" Width="140" BorderBrush="#FF307CD6"  Click="buttonSave_Click" Height="38" />
+            <Button x:Name="buttonClose" Content="Отмена" ToolTip="Отменить и выйти" Style="{StaticResource MaterialDesignFlatButton}" Width="140" Height="30" FontFamily="Segoe UI Black"   FontSize="18" Foreground="Black"   Click="buttonClose_Click" />
+        </WrapPanel>
+        <Label x:Name="labelMessage" Content="" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="201" Grid.Column="2" Grid.Row="8" Grid.ColumnSpan="4" Margin="1,12,0,0" />
+        <Button x:Name="ButtonClose" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click"  Grid.Column="7"  Foreground="Black" Height="Auto">
+            <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
+        </Button>
+    </Grid>
+</Window>

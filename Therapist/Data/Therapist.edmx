@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Therapist.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TherapistStoreContainer">
+    <EntitySet Name="Consultations" EntityType="Therapist.Store.Consultations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Visits" EntityType="Therapist.Store.Visits" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Doctors" EntityType="Therapist.Store.Doctors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="Therapist.Store.Patients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="Therapist.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Consultations_Doctors" Association="Therapist.Store.FK_Consultations_Doctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Consultation" EntitySet="Consultations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Consultations_Patients" Association="Therapist.Store.FK_Consultations_Patients">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Consultation" EntitySet="Consultations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Visits_Doctors" Association="Therapist.Store.FK_Visits_Doctors">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="Visit" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Visits_Patients" Association="Therapist.Store.FK_Visits_Patients">
+      <End Role="Patient" EntitySet="Patients" />
+      <End Role="Visit" EntitySet="Visits" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Doctor" Association="Therapist.Store.FK_User_Doctor">
+      <End Role="Doctor" EntitySet="Doctors" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Consultations">
+    <Key>
+      <PropertyRef Name="ConsultationID" />
+    </Key>
+    <Property Name="ConsultationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScheduleDate" Type="datetime" Nullable="true" />
+    <Property Name="ScheduleTime" Type="time" Nullable="true" Precision="7" />
+    <Property Name="PatientID" Type="int" Nullable="true" />
+    <Property Name="DoctorID" Type="int" Nullable="true" />
+    <Property Name="Reason" Type="nvarchar" Nullable="true" MaxLength="512" />
+    <Property Name="Notes" Type="nvarchar" Nullable="true" MaxLength="512" />
+  </EntityType>
+  <EntityType Name="Visits">
+    <Key>
+      <PropertyRef Name="VisitID" />
+    </Key>
+    <Property Name="VisitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientID" Type="int" Nullable="true" />
+    <Property Name="DoctorID" Type="int" Nullable="true" />
+    <Property Name="Reason" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Notes" Type="nvarchar" Nullable="true" MaxLength="512" />
+    <Property Name="VisitDate" Type="datetime" Nullable="true" />
+    <Property Name="Prescription" Type="nvarchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Doctors">
+    <Key>
+      <PropertyRef Name="DoctorID" />
+    </Key>
+    <Property Name="DoctorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Skils" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Phone" Type="nvarchar" Nullable="true" MaxLength="32" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Name="PatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" Nullable="true" MaxLength="255" />
+    <Property Name="Phone" Type="nvarchar" Nullable="true" MaxLength="32" />
+    <Property Name="Birthdate" Type="datetime" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="true" MaxLength="128" />
+    <Property Name="DoctorID" Type="int" Nullable="true" />
+    <Property Name="RoleID" Type="smallint" Nullable="true" />
+  </EntityType>
+  <Association Name="FK_Consultations_Doctors">
+    <End Role="Doctor" Type="Therapist.Store.Doctors" Multiplicity="0..1" />
+    <End Role="Consultation" Type="Therapist.Store.Consultations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Consultation">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Consultations_Patients">
+    <End Role="Patient" Type="Therapist.Store.Patients" Multiplicity="0..1" />
+    <End Role="Consultation" Type="Therapist.Store.Consultations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Consultation">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Visits_Doctors">
+    <End Role="Doctor" Type="Therapist.Store.Doctors" Multiplicity="0..1" />
+    <End Role="Visit" Type="Therapist.Store.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="Visit">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Visits_Patients">
+    <End Role="Patient" Type="Therapist.Store.Patients" Multiplicity="0..1" />
+    <End Role="Visit" Type="Therapist.Store.Visits" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patient">
+        <PropertyRef Name="PatientID" />
+      </Principal>
+      <Dependent Role="Visit">
+        <PropertyRef Name="PatientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Doctor">
+    <End Role="Doctor" Type="Therapist.Store.Doctors" Multiplicity="0..1" />
+    <End Role="User" Type="Therapist.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctor">
+        <PropertyRef Name="DoctorID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Therapist" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="TherapistContainer1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Consultations" EntityType="Therapist.Consultation" />
+          <EntitySet Name="Visits" EntityType="Therapist.Visit" />
+          <EntitySet Name="Doctors" EntityType="Therapist.Doctor" />
+          <EntitySet Name="Patients" EntityType="Therapist.Patient" />
+          <EntitySet Name="Users" EntityType="Therapist.User" />
+          <AssociationSet Name="FK_Consultations_Doctors" Association="Therapist.FK_Consultations_Doctors">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="Consultation" EntitySet="Consultations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Consultations_Patients" Association="Therapist.FK_Consultations_Patients">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Consultation" EntitySet="Consultations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_Doctors" Association="Therapist.FK_Visits_Doctors">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="Visit" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Visits_Patients" Association="Therapist.FK_Visits_Patients">
+            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Visit" EntitySet="Visits" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Doctor" Association="Therapist.FK_User_Doctor">
+            <End Role="Doctor" EntitySet="Doctors" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Consultation">
+          <Key>
+            <PropertyRef Name="ConsultationID" />
+          </Key>
+          <Property Name="ConsultationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScheduleDate" Type="DateTime" Precision="3" />
+          <Property Name="ScheduleTime" Type="Time" Precision="7" />
+          <Property Name="PatientID" Type="Int32" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="Reason" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Doctor" Relationship="Therapist.FK_Consultations_Doctors" FromRole="Consultation" ToRole="Doctor" />
+          <NavigationProperty Name="Patient" Relationship="Therapist.FK_Consultations_Patients" FromRole="Consultation" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Visit">
+          <Key>
+            <PropertyRef Name="VisitID" />
+          </Key>
+          <Property Name="VisitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PatientID" Type="Int32" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="Reason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="VisitDate" Type="DateTime" Precision="3" />
+          <Property Name="Prescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Doctor" Relationship="Therapist.FK_Visits_Doctors" FromRole="Visit" ToRole="Doctor" />
+          <NavigationProperty Name="Patient" Relationship="Therapist.FK_Visits_Patients" FromRole="Visit" ToRole="Patient" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Skils" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Consultations" Relationship="Therapist.FK_Consultations_Doctors" FromRole="Doctor" ToRole="Consultation" />
+          <NavigationProperty Name="Visit" Relationship="Therapist.FK_Visits_Doctors" FromRole="Doctor" ToRole="Visit" />
+          <NavigationProperty Name="User" Relationship="Therapist.FK_User_Doctor" FromRole="Doctor" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Patient">
+          <Key>
+            <PropertyRef Name="PatientID" />
+          </Key>
+          <Property Name="PatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Birthdate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Consultations" Relationship="Therapist.FK_Consultations_Patients" FromRole="Patient" ToRole="Consultation" />
+          <NavigationProperty Name="Visit" Relationship="Therapist.FK_Visits_Patients" FromRole="Patient" ToRole="Visit" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="RoleID" Type="Int16" />
+          <NavigationProperty Name="Doctor" Relationship="Therapist.FK_User_Doctor" FromRole="User" ToRole="Doctor" />
+        </EntityType>
+        <Association Name="FK_Consultations_Doctors">
+          <End Type="Therapist.Doctor" Role="Doctor" Multiplicity="0..1" />
+          <End Type="Therapist.Consultation" Role="Consultation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="Consultation">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Consultations_Patients">
+          <End Type="Therapist.Patient" Role="Patient" Multiplicity="0..1" />
+          <End Type="Therapist.Consultation" Role="Consultation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="PatientID" />
+            </Principal>
+            <Dependent Role="Consultation">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_Doctors">
+          <End Type="Therapist.Doctor" Role="Doctor" Multiplicity="0..1" />
+          <End Type="Therapist.Visit" Role="Visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="Visit">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Visits_Patients">
+          <End Type="Therapist.Patient" Role="Patient" Multiplicity="0..1" />
+          <End Type="Therapist.Visit" Role="Visit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Patient">
+              <PropertyRef Name="PatientID" />
+            </Principal>
+            <Dependent Role="Visit">
+              <PropertyRef Name="PatientID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Doctor">
+          <End Type="Therapist.Doctor" Role="Doctor" Multiplicity="0..1" />
+          <End Type="Therapist.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TherapistStoreContainer" CdmEntityContainer="TherapistContainer1">
+    <EntitySetMapping Name="Consultations">
+      <EntityTypeMapping TypeName="IsTypeOf(Therapist.Consultation)">
+        <MappingFragment StoreEntitySet="Consultations">
+          <ScalarProperty Name="ConsultationID" ColumnName="ConsultationID" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="ScheduleTime" ColumnName="ScheduleTime" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Visits">
+      <EntityTypeMapping TypeName="IsTypeOf(Therapist.Visit)">
+        <MappingFragment StoreEntitySet="Visits">
+          <ScalarProperty Name="VisitID" ColumnName="VisitID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+          <ScalarProperty Name="Prescription" ColumnName="Prescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="IsTypeOf(Therapist.Doctor)">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Skils" ColumnName="Skils" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="IsTypeOf(Therapist.Patient)">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Therapist.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="По умолчанию" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
+

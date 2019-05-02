@@ -1,0 +1,129 @@
+﻿<Window x:Class="Therapist.View.EditPatientForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Therapist"
+        xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="LoginForm" Height="450" MouseDown="EditPatientForm_MouseDown" Width="916" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="105*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="648*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="6" Grid.RowSpan="9"/>
+        <Rectangle Grid.RowSpan="9" Grid.ColumnSpan="4"/>
+        <Button x:Name="ButtonClose" Height="Auto" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Grid.Column="5">
+            <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
+        </Button>
+        <Label x:Name="labelMessage" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="147" Grid.ColumnSpan="2" Grid.Row="7" Grid.Column="1" Height="27"/>
+        <Label x:Name="labelHeaderText" Content="    Просмотр и &#xA; редактирование &#xA;    информации &#xA;      пациента" FontFamily="Segoe UI Black" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.ColumnSpan="5" Height="138" Grid.RowSpan="2" Width="207" Margin="2,0,0,0" />
+        <Label x:Name="label6" Content="№." Height="29" Width="30" FontSize="16" Grid.Column="1" Margin="0,93,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+        <Label x:Name="labelId" Content="0" FontSize="16" Grid.Column="2" Margin="0,93,98,0" Grid.Row="1" Grid.RowSpan="2" Height="29" Width="19" />
+        <materialDesign:PackIcon Kind="User"  Foreground="blue" Grid.Column="1" Margin="0,5,0,0" Grid.Row="3" Height="25" Width="30"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="30" materialDesign:HintAssist.Hint="Имя пациента"  TextWrapping="Wrap"  VerticalAlignment="Top"   Grid.Column="2" Grid.Row="3" Width="117"/>
+        <Label x:Name="label7" Content="*" Foreground="Red" Grid.Column="3" Grid.Row="3" Height="30" Width="30"/>
+        <materialDesign:PackIcon Kind="Calendar"  Foreground="blue" Grid.Column="1" Margin="0,5,0,0" Grid.Row="4" Height="25" Width="30"/>
+        <materialDesign:PackIcon Kind="Telephone"  Foreground="blue" Grid.Column="1" Margin="0,5,0,0" Grid.Row="5" Height="25" Width="30"/>
+        <materialDesign:PackIcon Kind="AccountAddress"  Foreground="blue" Grid.Column="1" Margin="0,10,0,0" Grid.Row="6" Height="25" Width="30"/>
+        <DatePicker x:Name="dateTimePickerBirthdate" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Дата рождения"  VerticalAlignment="Top" Width="117" Grid.Column="2" Grid.Row="4" Height="30"/>
+        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="30"  TextWrapping="Wrap" materialDesign:HintAssist.Hint="Телефон" VerticalAlignment="Top" Width="117"  Grid.Column="2" Grid.Row="5"/>
+        <TextBox x:Name="textBoxAddress" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Адрес" Width="117"  Grid.Column="2" Grid.Row="6"/>
+        <WrapPanel x:Name="panelChooseButtons" Grid.ColumnSpan="2"  Grid.Row="8" Grid.Column="1" >
+            <Button x:Name="buttonSave" ToolTip="Изменить информцию о пациенте" Content="Изменить" Width="146" Height="30" Click="buttonSave_Click" />
+            <Button x:Name="buttonClose" ToolTip="Отменить и выйти" Content="Отменить" Style="{StaticResource MaterialDesignFlatButton}"  Foreground="White" Width="146" Click="buttonClose_Click" Height="30"/>
+            <Button x:Name="buttonPrint" ToolTip="Печатать отчёт" Content="Печать"   Width="146" Click="buttonClose_Click" Height="30"/>
+        </WrapPanel>
+        <StackPanel x:Name="tabControlAdditionalInfo"/>
+        <StackPanel  Grid.ColumnSpan="2" Grid.Column="4" Grid.Row="1" Grid.RowSpan="8">
+            <Expander MouseDown="UIElement_OnMouseDown"  Background="White" HorizontalAlignment="Stretch">
+                <Expander.Header>
+                    <TextBlock MouseDown="UIElement_OnMouseDown" Text="КОНСУЛЬТАЦИИ" FontFamily="MADE Evolve Sans EVO"  Foreground="Blue" FontSize="27" FontWeight="Bold"  Grid.Row="1" Grid.RowSpan="2"/>
+                </Expander.Header>
+                <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                    <Grid Background="#FFE5E5E5" Height="270" >
+                        <DataGrid x:Name="dataGridViewConsultations" ItemsSource="{Binding}" IsReadOnly="True" HorizontalAlignment="Left" Height="210"
+                                  VerticalAlignment="Top" Width="696" AlternatingRowBackground="#FFEEEEEE"  RowBackground ="White" 
+                                  Background="White" BorderBrush="Black" Foreground="Black" OpacityMask="Black" FontFamily="ComicSans"
+                                  SelectionChanged="dataGridViewConsultations_SelectionChanged">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header=" " Binding="{Binding Path=ConsultationId}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Дата" Width="110" Binding="{Binding Path=ScheduleDate, StringFormat=\{0:dd.MM.yyyy\}}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Время" Width="75" Binding="{Binding Path=ScheduleTime}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Причина"  Width="110" Binding="{Binding Path=Reason}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Заключение" Width="110" Binding="{Binding Path=Conclusion}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Врач"  Width="110" Binding="{Binding Path=Doctor.Name}"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <WrapPanel x:Name="panelButtons" Margin="10,210,0, 0">
+                            <Button x:Name="buttonEditConsultation"  Width="50" Click="buttonEditConsultation_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                    ToolTip="Редактировать выбранную консультацию" Height="50" >
+                                <materialDesign:PackIcon Kind="TableEdit" Height="35" Width="35" />
+                            </Button>
+                            <Button x:Name="buttonDeleteConsultation"  Width="50" Height="50" Click="buttonDeleteConsultation_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                    ToolTip="Удалить выбранную консультацию" Margin="15 0 450 0" >
+                                <materialDesign:PackIcon Kind="DeleteEmpty" Height="35" Width="35" />
+                            </Button>
+                            <Button x:Name="buttonAddConsultation"  Width="50" Click="buttonAddConsultation_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                    ToolTip="Добавить консультацию" Height="50">
+                                <materialDesign:PackIcon Kind="Plus" Height="35" Width="35" />
+                            </Button>
+                        </WrapPanel>
+                    </Grid>
+                </StackPanel>
+            </Expander>
+            <Expander MouseDown="UIElement_OnMouseDown" HorizontalAlignment="Stretch" Background="White" Height="354">
+                <Expander.Header  >
+                    <TextBlock MouseDown="UIElement_OnMouseDown" Text="ВИЗИТЫ" FontFamily="MADE Evolve Sans EVO" Foreground="Blue"  FontSize="27" FontWeight="Bold"  Grid.Row="1" Grid.RowSpan="2"/>
+                </Expander.Header>
+                <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                    <Grid Background="#FFE5E5E5" Height="290">
+                        <DataGrid x:Name="dataGridViewVisits" ItemsSource="{Binding }" IsReadOnly="True" HorizontalAlignment="Left" 
+                                  Height="280" VerticalAlignment="Top" Width="699" AlternatingRowBackground="#FFEEEEEE"  RowBackground ="White" 
+                                  Background="White"  BorderBrush="Black" Foreground="Black" OpacityMask="Black" FontFamily="ComicSans" >
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn Header=" " Binding="{Binding Path=DiagnoseId}"></DataGridTextColumn>-->
+                                <DataGridTextColumn Header="Дата" Width="110" Binding="{Binding Path=DiagnosticationDate, StringFormat=\{0:dd.MM.yyyy \}}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Диагноз"  Width="110" Binding="{Binding Path=Subect}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Примечание" Width="110" Binding="{Binding Path=Notes}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Рецепт"  Width="110" Binding="{Binding Path=Prescription}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Врач"  Width="110" Binding="{Binding Path=Doctor.Name}"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <WrapPanel x:Name="panel2" Margin="0,210,0,20">
+                            <Button x:Name="buttonEditVisit"  Width="50" Click="buttonEditVisit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                    ToolTip="Редактировать выбранную консультацию" Height="50" Margin="10 0">
+                                <materialDesign:PackIcon Kind="TableEdit" Height="35" Width="35" />
+                            </Button>
+                            <Button x:Name="buttonDeleteVisit"  Width="50" Height="50" Click="buttonDeleteVisit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                    ToolTip="Удалить выбранный диагноз" Margin="10 0 450 0" >
+                                <materialDesign:PackIcon Kind="DeleteEmpty" Height="35" Width="35" />
+                            </Button>
+                            <Button x:Name="buttonAddVisit"  Width="50" Click="buttonAddVisit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                                    ToolTip="Добавить диагноз" Height="50">
+                                <materialDesign:PackIcon Kind="Plus" Height="35" Width="35" />
+                            </Button>
+                        </WrapPanel>
+                    </Grid>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+    </Grid>
+</Window>

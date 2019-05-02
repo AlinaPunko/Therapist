@@ -1,0 +1,108 @@
+﻿<Window x:Name="VisitsForm1" x:Class="Therapist.View.VisitsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Therapist.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Диагнозы" MouseDown="VisitsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="501*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="32*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="10" Grid.RowSpan="11"/>
+
+        <Rectangle Grid.RowSpan="11" Grid.ColumnSpan="5" />
+        <Button x:Name="ButtonClose" Height="Auto" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Margin="57,5,10,45" Grid.Column="8" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
+        </Button>
+        <Label Content="Поиск &#xD;Визитов" FontSize="24" Height="80" Width="190" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Column="1"/>
+        <Button x:Name="button"  BorderBrush="{x:Null}" Padding="0" Height="Auto"   Grid.Column="2" Grid.Row="2">
+            <Button.Background>
+                <ImageBrush ImageSource="../Picture/help.png"  Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+
+        <materialDesign:PackIcon Kind="BookPlus" Foreground="Blue" Height="30" Width="22" Grid.Row="4" Grid.Column="1" />
+        <TextBox x:Name="textBoxReason" BorderBrush="Blue" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Название(диагноза)" Foreground="Black" VerticalAlignment="Top" Width="143" Grid.ColumnSpan="3" Grid.Row="4"  Grid.Column="2" Margin="1,2,0,0"/>
+        <DatePicker x:Name="dateTimePickerFrom" BorderBrush="Blue" materialDesign:HintAssist.Hint="От даты"  Height="26" 
+                    Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,20,0,0"   />
+        <DatePicker x:Name="dateTimePickerTo" BorderBrush="Blue" materialDesign:HintAssist.Hint="До даты"  Height="34" 
+                    VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" />
+
+        <Button x:Name="buttonSearch" ToolTip="Искать визит"  Content="Поиск" Click="buttonSearch_Click" Grid.Row="9" Grid.Column="2"   Height="Auto"/>
+
+        <DataGrid x:Name="dataGridViewResult"  ItemsSource="{Binding }" IsReadOnly="True"  HorizontalAlignment="Left" Height="325" VerticalAlignment="Top" Width="706"
+                  AlternatingRowBackground="#FFEEEEEE"  RowBackground ="White" 
+                  Background="White"  
+                  BorderBrush="Black" Foreground="Black" OpacityMask="Black" FontFamily="ComicSans" Grid.ColumnSpan="5" Grid.Row="1" Grid.RowSpan="8" Grid.Column="5">
+            <DataGrid.Columns>
+                <!--<DataGridTextColumn Header=" " 
+                                    Binding="{Binding Path=DiagnoseId}"></DataGridTextColumn>-->
+                <DataGridTextColumn Header="Диагноз" Width="auto"
+                                    Binding="{Binding Path=Subect}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пациент"  Width="auto"
+                                    Binding="{Binding Path=Patient.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата" Width="auto"
+                                    Binding="{Binding Path=DiagnosticationDate, StringFormat=\{0:dd.MM.yyyy\}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Врач"  Width="auto"
+                                    Binding="{Binding Path=Doctor.Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Примечание"  Width="auto"
+                                    Binding="{Binding Path=Notes}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Рецепт"  Width="auto"
+                                    Binding="{Binding Path=Prescription}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel Grid.Column="7" Grid.Row="9" Grid.ColumnSpan="2" x:Name="panelButtons" Grid.RowSpan="2"  >
+            <Button x:Name="buttonEdit" Width="50"  Click="buttonEdit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    ToolTip="Редактировать выбранный визит" Height="50" Grid.Column="6" Grid.Row="8">
+                <materialDesign:PackIcon
+                    Kind="TableEdit"
+                    Height="35"
+                    Width="35" />
+            </Button>
+            <Button x:Name="buttonDelete" Width="50" Click="buttonDelete_Click" Margin="0 0 360 0" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                ToolTip="Удалить выбранный визит" Height="50"  >
+                <materialDesign:PackIcon
+                Kind="DeleteEmpty"
+                Height="35"
+                Width="35" />
+            </Button>
+            <Button x:Name="buttonAdd"  Width="50" Click="buttonAdd_Click"  Style="{StaticResource MaterialDesignFloatingActionButton}"
+                ToolTip="Добавить диагноз" Height="50" >
+                <materialDesign:PackIcon
+                Kind="Plus"
+                Height="35"
+                Width="35" />
+            </Button>
+
+        </WrapPanel>
+        <StatusBar x:Name="statusStripBottom" Background="White" HorizontalAlignment="Left" Height="20" Margin="2,15,0,0" VerticalAlignment="Top" Width="624" Grid.Column="5" Grid.Row="10" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Left" Height="38" Margin="10,7,0,0" VerticalAlignment="Top" Width="173" Grid.Row="10" Grid.ColumnSpan="4"/>
+
+
+    </Grid>
+</Window>
