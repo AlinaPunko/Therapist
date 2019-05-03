@@ -36,8 +36,7 @@ namespace Therapist.View
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
-        public EditPatientForm(int patientId)
-            : this()
+        public EditPatientForm(int patientId) : this()
         {
             if (patientId == 0)
             {
@@ -48,8 +47,6 @@ namespace Therapist.View
                 this.Presenter.Load(patientId);
                 this.Presenter.LoadVisit();
                 this.Presenter.LoadConsultations();
-
-
             }
         }
 
@@ -301,6 +298,11 @@ namespace Therapist.View
         }
 
         private void dataGridViewConsultations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void buttonPrint_Click(object sender, RoutedEventArgs e)
         {
 
         }

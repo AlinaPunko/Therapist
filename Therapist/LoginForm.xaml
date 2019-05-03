@@ -32,10 +32,10 @@
             <RowDefinition Height="19"/>
         </Grid.RowDefinitions>
         <Rectangle  Grid.ColumnSpan="7"  Grid.RowSpan="10" Margin="0,0,0,-7" />
-        <Menu Name="Languages"  Background="{x:Null}"   Grid.ColumnSpan="3">
+        <!--<Menu Name="Languages"  Background="{x:Null}"   Grid.ColumnSpan="3">
             <MenuItem Name="Русский" Click="OnLanguageChange" HorizontalContentAlignment="Center" Width="42" Height="25"/>
             <MenuItem x:Name="English" Click="OnLanguageChange" HorizontalContentAlignment="Center" Width="50" Height="25" />
-        </Menu>
+        </Menu>-->
         <Image Grid.Column="3" Name="img1" Source="Picture/doctor (2).png"  Grid.Row="1"/>
         <Label Content="Войдите" FontSize="24" Grid.Column="3" Grid.Row="2" Margin="10,0,21,0" Height="42" Width="99"/>
         <Label Content="в свою учётную запись"  FontSize="16" Grid.Column="2" Grid.Row="2" Margin="0,37,0,0" Grid.ColumnSpan="3" Height="31" Width="190"/>

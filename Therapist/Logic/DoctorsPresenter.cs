@@ -62,8 +62,6 @@ namespace Therapist.Logic
                 {
                     doctorsQuery = doctorsQuery.Where(d => d.Name.Contains(name));
                 }
-
-
                 this.Doctors = doctorsQuery.ToList();
             }
             catch (Exception e)

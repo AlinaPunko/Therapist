@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Therapist.Data;
+using Therapist.Logic;
+using Therapist.Models;
+using Therapist.View;
 
 namespace Therapist
 {
@@ -23,6 +27,8 @@ namespace Therapist
         public MainWindow()
         {
             InitializeComponent();
-        }
+            
+        }       
     }
 }
+    

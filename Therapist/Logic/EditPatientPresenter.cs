@@ -104,7 +104,8 @@ namespace Therapist.Logic
             }
             catch (Exception e)
             {
-                var message = String.Format("Ошибка хранилища!Позвоните администратору!/ n [0] ", e.Message);
+                var message = String.Format("Ошибка хранилища");
+                MessageBox.Show(e.Message);
                 View.Message = message;
             }
 

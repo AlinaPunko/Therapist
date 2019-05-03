@@ -28,11 +28,21 @@ namespace Therapist.View
             this.Presenter.LoadAllPatients();
         }
         public PatientsPresenter Presenter { get; set; }
-
+        public string NameSearch
+        {
+            get
+            {
+                return textBoxName.Text;
+            }
+            set
+            {
+                this.textBoxName.Text = value;
+            }
+        }
         private void buttonSearch_Click(object sender, RoutedEventArgs e)
         {
-            string name = textBoxName.Text;
-            this.Presenter.LoadPatientsByCriterias(name);
+            //string name = textBoxName.Text;
+            this.Presenter.LoadPatientsByCriterias();//name);
         }
         private void PatientsForm_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -65,9 +75,9 @@ namespace Therapist.View
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            int newPatientId = 0;
-            EditPatientForm patientForm = new EditPatientForm(newPatientId);
-            patientForm.ShowDialog();
+            EditPatientForm editpatientForm = new EditPatientForm(0);
+            editpatientForm.ShowDialog();
+            this.Presenter.LoadPatientsByCriterias();
         }
 
         #region IPatientsView Members

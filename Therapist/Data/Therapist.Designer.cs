@@ -925,10 +925,12 @@ namespace Therapist.Data
         /// Создание нового объекта User.
         /// </summary>
         /// <param name="userID">Исходное значение свойства UserID.</param>
-        public static User CreateUser(global::System.Int32 userID)
+        /// <param name="roleID">Исходное значение свойства RoleID.</param>
+        public static User CreateUser(global::System.Int32 userID, global::System.Int16 roleID)
         {
             User user = new User();
             user.UserID = userID;
+            user.RoleID = roleID;
             return user;
         }
 
@@ -1038,9 +1040,9 @@ namespace Therapist.Data
         /// <summary>
         /// Нет доступной документации по метаданным.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int16> RoleID
+        public global::System.Int16 RoleID
         {
             get
             {
@@ -1055,8 +1057,8 @@ namespace Therapist.Data
                 OnRoleIDChanged();
             }
         }
-        private Nullable<global::System.Int16> _RoleID;
-        partial void OnRoleIDChanging(Nullable<global::System.Int16> value);
+        private global::System.Int16 _RoleID;
+        partial void OnRoleIDChanging(global::System.Int16 value);
         partial void OnRoleIDChanged();
 
         #endregion

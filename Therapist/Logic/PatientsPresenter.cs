@@ -67,8 +67,13 @@ namespace Therapist.Logic
                 this.Message = "Ошибка при запросе базы данных!Вызовите администратора!";
             }
         }
+        public void LoadPatientsByCriterias()
+        {
+            string name = this.View.NameSearch;
+            this.LoadPatientsByCriterias(name);
+        }
 
-        internal void LoadAllPatients()
+        public void LoadAllPatients()
         {
             this.LoadPatientsByCriterias(string.Empty);
         }

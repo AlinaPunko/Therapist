@@ -237,8 +237,8 @@
           <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="DoctorID" Type="Int32" />
-          <Property Name="RoleID" Type="Int16" />
+          <Property Name="DoctorID" Type="Int32" Nullable="true" />
+          <Property Name="RoleID" Type="Int16" Nullable="false" />
           <NavigationProperty Name="Doctor" Relationship="Therapist.FK_User_Doctor" FromRole="User" ToRole="Doctor" />
         </EntityType>
         <Association Name="FK_Consultations_Doctors">

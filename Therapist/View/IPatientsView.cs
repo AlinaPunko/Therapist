@@ -11,5 +11,6 @@ namespace Therapist.View
     {
         IEnumerable<Patient> Patients { set; }
         string Message { set; }
+        string NameSearch { get; set; }
     }
 }

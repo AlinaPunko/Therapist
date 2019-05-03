@@ -27,19 +27,19 @@ namespace Therapist
         public LoginForm()
         {
             InitializeComponent();
-            foreach (MenuItem item in Languages.Items)
-            {
-                string name = item.Name;
-                item.Height = 25;
-                item.Width = 50;
-                item.ToolTip = name;
-                item.Margin = new Thickness(10, 0, 0, 0);
-                item.Background = new ImageBrush
-                {
-                    ImageSource = BitmapFrame.Create(new Uri(GetLanguageDirectory() + $"\\{name}.png", UriKind.Relative)),
-                    Opacity = 0.7
-                };
-            }
+            //foreach (MenuItem item in Languages.Items)
+            //{
+            //    string name = item.Name;
+            //    item.Height = 25;
+            //    item.Width = 50;
+            //    item.ToolTip = name;
+            //    item.Margin = new Thickness(10, 0, 0, 0);
+            //    item.Background = new ImageBrush
+            //    {
+            //        ImageSource = BitmapFrame.Create(new Uri(GetLanguageDirectory() + $"\\{name}.png", UriKind.Relative)),
+            //        Opacity = 0.7
+            //    };
+            //}
         }
         private void LoginForm_MouseDown ( object sender, MouseButtonEventArgs e)
         {

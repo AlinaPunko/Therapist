@@ -27,8 +27,7 @@ namespace Therapist.View
         }
         public EditDoctorPresenter Presenter { get; set; }
 
-        public EditDoctorForm(int doctorId)
-            : this()
+        public EditDoctorForm(int doctorId): this()
         {
             if (doctorId == 0)
             {

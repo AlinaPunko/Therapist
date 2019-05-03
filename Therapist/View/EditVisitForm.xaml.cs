@@ -31,16 +31,16 @@ namespace Therapist.View
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
-        public EditVisitForm(int consultationId)
+        public EditVisitForm(int visitId)
             : this()
         {
-            if (consultationId == 0)
+            if (visitId == 0)
             {
                 this.Presenter.CreateNew();
             }
             else
             {
-                this.Presenter.Load(consultationId);
+                this.Presenter.Load(visitId);
             }
 
         }

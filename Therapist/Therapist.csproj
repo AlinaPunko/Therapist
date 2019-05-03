@@ -86,6 +86,18 @@
     <Compile Include="Logic\EditVisitPresenter.cs" />
     <Compile Include="Logic\PatientsPresenter.cs" />
     <Compile Include="Logic\VisitsPresenter.cs" />
+    <Compile Include="Presentation\Slide2.xaml.cs">
+      <DependentUpon>Slide2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Slide3.xaml.cs">
+      <DependentUpon>Slide3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Slide4.xaml.cs">
+      <DependentUpon>Slide4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Slide5.xaml.cs">
+      <DependentUpon>Slide5.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ConsultationsForm.xaml.cs">
       <DependentUpon>ConsultationsForm.xaml</DependentUpon>
     </Compile>
@@ -122,94 +134,6 @@
     <Compile Include="View\VisitsForm.xaml.cs">
       <DependentUpon>VisitsForm.xaml</DependentUpon>
     </Compile>
-    <Page Include="Languages\English\ConsultationsFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\DoctorsFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\EditConsultationFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\EditDoctorFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\EditPatientFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\EditUserFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\EditVisitFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\LoginFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\MainWindowEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\PatientsFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\English\VisitsFormEng.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Languages\Russian\ConsultationsFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\DoctorsFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\EditConsultationFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\EditDoctorFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\EditPatientFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\EditUserFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\EditVisitFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\LoginFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\MainWindowRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\PatientsFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Languages\Russian\VisitsFormRus.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="LoginForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -235,6 +159,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Presentation\Slide2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Slide3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Slide4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Slide5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resourses\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -322,8 +262,9 @@
   <ItemGroup>
     <Content Include="Data\Model1.edmx.sql" />
     <Content Include="Data\Therapist.edmx.sql" />
-    <Resource Include="Languages\English.png" />
-    <Resource Include="Languages\Русский.png" />
+    <Resource Include="Picture\Pic1.jpg" />
+    <Resource Include="Picture\Pic2.jpg" />
+    <Resource Include="Picture\Pic3.jpg" />
     <Resource Include="Picture\doctor %282%29.png" />
     <Resource Include="Picture\hospital %283%29.png" />
     <Resource Include="Picture\stethoscope.png" />
