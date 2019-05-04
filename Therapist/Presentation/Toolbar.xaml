@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Therapist.Presentation.Toolbar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="Auto" Width="Auto">
+    <UserControl.Resources>
+        <RoutedCommand x:Key="NavigationCommand" />
+    </UserControl.Resources>
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{StaticResource NavigationCommand}"
+                     Executed="NavigationCommand_Executed" />
+    </UserControl.CommandBindings>
+    <ToolBar HorizontalAlignment="Right">
+        <Button CommandParameter="Page1.xaml" 
+					Command="{StaticResource NavigationCommand}">First Page</Button>
+        <Button CommandParameter="Page2.xaml" 
+					Command="{StaticResource NavigationCommand}">Second Page</Button>
+        <Button CommandParameter="Page3.xaml" 
+					Command="{StaticResource NavigationCommand}">Third Page</Button>
+        <Button CommandParameter="Page4.xaml" 
+					Command="{StaticResource NavigationCommand}">Fourth Page</Button>
+        <Button CommandParameter="Page5.xaml" 
+					Command="{StaticResource NavigationCommand}">Fifth Page</Button>
+    </ToolBar>
+</UserControl>

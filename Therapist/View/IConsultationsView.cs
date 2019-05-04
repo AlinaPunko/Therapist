@@ -13,5 +13,6 @@ namespace Therapist.View
         string Message { set; }
         DateTime? ScheduleDateFromCriteria { get; set; }
         DateTime? ScheduleDateToCriteria { get; set; }
+        //int currentDoctorID { get; set; }
     }
 }

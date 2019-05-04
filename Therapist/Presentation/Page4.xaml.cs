@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Therapist.Presentation
 {
     /// <summary>
-    /// Логика взаимодействия для Slide4.xaml
+    /// Логика взаимодействия для Page4.xaml
     /// </summary>
-    public partial class Slide4 : UserControl
+    public partial class Page4 : Page
     {
-        public Slide4()
+        public Page4()
         {
             InitializeComponent();
         }

@@ -14,5 +14,6 @@ namespace Therapist.View
         DateTime? VisitDateFromCriteria { get; set; }
         DateTime? VisitDateToCriteria { get; set; }
         string ReasonSearch { get; set; }
+       // int currentDoctorID { get; set; }
     }
 }

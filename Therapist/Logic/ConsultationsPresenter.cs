@@ -53,12 +53,16 @@ namespace Therapist.Logic
         /// </summary>
         /// <param name="name"></param>
         /// <param name="number"></param>
-        public void LoadConsultationsByCriterias(DateTime? dateTimeFrom, DateTime? dateTimeTo/*, int doctorId*/)
+        public void LoadConsultationsByCriterias(DateTime? dateTimeFrom, DateTime? dateTimeTo, int doctorId)
         {
             try
             {
                 IQueryable<Consultation> consultationsQuery;
                 consultationsQuery = ConsultationDataAccess.GetConsultations();
+                if (doctorId != 0)
+                {
+                    consultationsQuery = consultationsQuery.Where(c => c.DoctorID == doctorId);
+                }
                 if (dateTimeFrom.HasValue)
                 {
                     DateTime dateTimeFromValue = dateTimeFrom.Value;
@@ -70,11 +74,6 @@ namespace Therapist.Logic
                     DateTime dateTimeToValue = dateTimeTo.Value;
                     consultationsQuery = consultationsQuery.Where(p => p.ScheduleDate.Value < dateTimeToValue);
                 }
-
-                //if (doctorId != 0)
-                //{
-                //    consultationsQuery = consultationsQuery.Where(c => c.DoctorID == doctorId);
-                //}
 
                 this.Consultations = consultationsQuery.ToList();
             }
@@ -100,12 +99,12 @@ namespace Therapist.Logic
                 currentDoctorId = 0;
             }
 
-            this.LoadConsultationsByCriterias(dateTimeFrom, dateTimeTo/*, currentDoctorId*/);
+            this.LoadConsultationsByCriterias(dateTimeFrom, dateTimeTo, currentDoctorId);
         }
 
         internal void LoadAllConsultations()
         {
-            this.LoadConsultationsByCriterias(null, null/*, 0*/);
+            this.LoadConsultationsByCriterias(null, null, 0);
         }
     }
 }

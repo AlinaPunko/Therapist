@@ -36,7 +36,9 @@
             <MenuItem Name="Русский" Click="OnLanguageChange" HorizontalContentAlignment="Center" Width="42" Height="25"/>
             <MenuItem x:Name="English" Click="OnLanguageChange" HorizontalContentAlignment="Center" Width="50" Height="25" />
         </Menu>-->
-        <Image Grid.Column="3" Name="img1" Source="Picture/doctor (2).png"  Grid.Row="1"/>
+        <Button  Grid.Column="3" Grid.Row="1" Height="Auto" Background="Transparent" BorderBrush="Transparent" Click="Button_Click">
+            <Image Name="img1" Source="Picture/doctor (2).png"  />
+        </Button>
         <Label Content="Войдите" FontSize="24" Grid.Column="3" Grid.Row="2" Margin="10,0,21,0" Height="42" Width="99"/>
         <Label Content="в свою учётную запись"  FontSize="16" Grid.Column="2" Grid.Row="2" Margin="0,37,0,0" Grid.ColumnSpan="3" Height="31" Width="190"/>
         <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="Blue" Grid.Row="3" Height="32" Width="28" Grid.Column="1" Margin="0,0,0,41" Grid.RowSpan="2"/>

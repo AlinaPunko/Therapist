@@ -9,8 +9,8 @@
         Title="Диагнозы" MouseDown="VisitsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="65*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="50*"/>
             <RowDefinition Height="100*"/>
             <RowDefinition Height="28*"/>
             <RowDefinition Height="31*"/>
@@ -63,11 +63,11 @@
                 <!--<DataGridTextColumn Header=" " 
                                     Binding="{Binding Path=DiagnoseId}"></DataGridTextColumn>-->
                 <DataGridTextColumn Header="Диагноз" Width="auto"
-                                    Binding="{Binding Path=Subect}"></DataGridTextColumn>
+                                    Binding="{Binding Path=Reason}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Пациент"  Width="auto"
                                     Binding="{Binding Path=Patient.Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Дата" Width="auto"
-                                    Binding="{Binding Path=DiagnosticationDate, StringFormat=\{0:dd.MM.yyyy\}}"></DataGridTextColumn>
+                                    Binding="{Binding Path=VisitDate, StringFormat=\{0:dd.MM.yyyy\}}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Врач"  Width="auto"
                                     Binding="{Binding Path=Doctor.Name}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Примечание"  Width="auto"

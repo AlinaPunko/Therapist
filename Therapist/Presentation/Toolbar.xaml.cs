@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace Therapist.Presentation
 {
     /// <summary>
-    /// Логика взаимодействия для Slide2.xaml
+    /// Логика взаимодействия для Toolbar.xaml
     /// </summary>
-    public partial class Slide2 : UserControl
+    public partial class Toolbar : UserControl
     {
-        public Slide2()
+        public Toolbar()
         {
             InitializeComponent();
+        }
+        private void NavigationCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            NavigationService service = NavigationService.GetNavigationService(this);
+            service.Navigate(new Uri(e.Parameter.ToString(), UriKind.Relative));
         }
     }
 }

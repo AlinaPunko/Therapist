@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -149,6 +152,7 @@ namespace Therapist.View
                 dataGridViewVisits.AutoGenerateColumns = false;
                 dataGridViewVisits.DataContext = value;
             }
+            
         }
 
         public IEnumerable<Data.Consultation> Consultations
@@ -301,10 +305,36 @@ namespace Therapist.View
         {
 
         }
-
         private void buttonPrint_Click(object sender, RoutedEventArgs e)
         {
-
+            string Text = "Имя " + textBoxName.Text.ToString() + "\r\nДата рождения " + dateTimePickerBirthdate.Text.ToString() + "\r\nТелефон "
+                     + textBoxPhone.Text.ToString() + "\r\nАдрес " + textBoxAddress.Text.ToString() + "\r\n";
+            Text += "ВИЗИТЫ\r\n";
+            foreach (Visit v in dataGridViewVisits.Items)
+            {
+                Text += "Диагноз " + v.Reason + " cимптомы " + v.Notes + " дата " + v.VisitDate.ToString() + " доктор " + v.DoctorName + "\r\n";
+            }
+            Text += "КОНСУЛЬТАЦИИ\r\n";
+            foreach (Consultation c in dataGridViewConsultations.Items)
+            {
+                Text += "Причина " + c.Reason + " дата " + c.ScheduleDate.ToString() + " время " + c.ScheduleTime.ToString() + " доктор " + c.DoctorName + "\r\n";
+            }
+            //PrintDialog pr = new PrintDialog();
+            //if (pr.ShowDialog() == true)
+            //    pr.P(, Text);
+            PrintDocument p = new PrintDocument();
+            p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
+            {
+                e1.Graphics.DrawString(Text, new Font("Times New Roman", 12), new SolidBrush(System.Drawing.Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+            };
+            try
+            {
+                p.Print();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Exception Occured While Printing", ex);
+            }
         }
     }
 }

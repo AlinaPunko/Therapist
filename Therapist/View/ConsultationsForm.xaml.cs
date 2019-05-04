@@ -28,6 +28,13 @@ namespace Therapist.View
             //this.Presenter.LoadConsultationsByCriterias();
             this.Presenter.LoadAllConsultations();
         }
+        public ConsultationsForm(bool choose = true)
+        {
+            InitializeComponent();
+            this.Presenter = new ConsultationsPresenter(this);
+            //this.Presenter.LoadConsultationsByCriterias();
+            this.Presenter.LoadAllConsultations();
+        }
         public ConsultationsPresenter Presenter { get; set; }
         private void ConsultationsForm_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -49,6 +56,9 @@ namespace Therapist.View
         {
             set { MessageBox.Show(value); }
         }
+        
+            
+
 
 
         public DateTime? ScheduleDateFromCriteria
