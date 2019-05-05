@@ -31,7 +31,6 @@
     <Grid Background="#FFDEDEDE">
         <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="380" Width="870"/>
         <Image Source="Picture/Pic1.jpg"></Image>
-        <Label Name="Time" Height="135" Margin="90,55,589,0" Width="230"/>
         <Grid Height="40" VerticalAlignment="Top" Background="#FF5C99D6">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
