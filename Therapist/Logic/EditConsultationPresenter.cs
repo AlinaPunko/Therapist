@@ -36,20 +36,29 @@ namespace Therapist.Logic
 
         protected void FillView()
         {
-            int doctorId = Consultation.DoctorID.HasValue ? Consultation.DoctorID.Value : 0;
-            View.DoctorId = doctorId;
-            var consultationDoctor = DoctorDataAccess.GetDoctorById(doctorId);
-            if (consultationDoctor != null)
+            if (Membership.CurrentUser.RoleID == 2)
             {
-                View.DoctorName = consultationDoctor.Name;
+                int ID = (int)Membership.CurrentUser.DoctorID;
+                Doctor doctor = DoctorDataAccess.GetDoctorById(ID);
+                View.DoctorId = doctor.DoctorID;
+                View.DoctorName = doctor.Name;
             }
             else
             {
-                View.DoctorName = "Не выбран доктор";
+                int doctorId = Consultation.DoctorID.HasValue ? Consultation.DoctorID.Value : 1;
+                View.DoctorId = doctorId;
+                var consultationDoctor = DoctorDataAccess.GetDoctorById(doctorId);
+                if (consultationDoctor != null)
+                {
+                    View.DoctorName = consultationDoctor.Name;
+                }
+                else
+                {
+                    View.DoctorName = "Не выбран доктор";
+                }
             }
 
-
-            int patientId = Consultation.PatientID.HasValue ? Consultation.PatientID.Value : 0;
+            int patientId = Consultation.PatientID.HasValue ? Consultation.PatientID.Value : 1;
             View.PatientId = patientId;
             var consultationPatient = PatientsDataAccess.GetPatientById(patientId);
             if (consultationPatient != null)
@@ -154,17 +163,16 @@ namespace Therapist.Logic
         {
             var newConsultation = new Consultation();
             this.Consultation = newConsultation;
-
-
             var currentUser = Membership.CurrentUser;
-
-            var currentUserDoctor = currentUser.Doctor;
-            if (currentUserDoctor != null)
+            if (currentUser.RoleID==2)
             {
-                this.Consultation.PatientID = currentUserDoctor.DoctorID;
-                this.View.DoctorName = currentUserDoctor.Name;
+                int ID = (int)Membership.CurrentUser.DoctorID;
+                Doctor doctor = DoctorDataAccess.GetDoctorById(ID);
+                this.Consultation.DoctorID = doctor.DoctorID;
+                this.View.DoctorName = doctor.Name;
+                this.View.DoctorId = doctor.DoctorID;
             }
-
+           
             this.FillView();
 
         }

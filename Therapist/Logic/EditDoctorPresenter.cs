@@ -76,7 +76,24 @@ namespace Therapist.Logic
                 MessageBox.Show("Успешно");
                 SaveModel(Doctor);
                 FillView();
+               
             }
+            
+        }
+        public void Save1()
+        {
+
+            this.FillDoctor();
+            bool isValid = IsValid();
+            if (isValid)
+            {
+                MessageBox.Show("Успешно");
+                SaveModel(Doctor);
+                FillView();
+                EditUserForm editUserForm = new EditUserForm(Doctor.DoctorID, true);
+                editUserForm.Show();
+            }
+
         }
 
         private void SaveModel(Doctor model)
@@ -102,6 +119,13 @@ namespace Therapist.Logic
         }
 
         public void CreateNew()
+        {
+            var newDoctor = new Doctor();
+            this.Doctor = newDoctor;
+            this.FillView();
+        }
+
+        public void CreateNew(bool flag)
         {
             var newDoctor = new Doctor();
             this.Doctor = newDoctor;

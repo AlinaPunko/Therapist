@@ -125,5 +125,13 @@ namespace Therapist.Data
             context.Users.DeleteObject(user);
             context.SaveChanges();
         }
+        public static void DeleteUserByDoctorId(int doctorId)
+        {
+            TherapistContainer1 context = new TherapistContainer1();
+            var user = context.Users.Where(p => p.DoctorID == doctorId).FirstOrDefault();
+
+            context.Users.DeleteObject(user);
+            context.SaveChanges();
+        }
     }
 }

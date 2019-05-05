@@ -40,7 +40,7 @@
             <ColumnDefinition Width="41*"/>
         </Grid.ColumnDefinitions>
         <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="9" Grid.RowSpan="14"/>
-        <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Padding="0" Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Margin="1,5,10,0" Grid.Column="8" Grid.RowSpan="2">
+        <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto"  Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click"  Grid.Column="8" Grid.Row="1">
             <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
         </Button>
         <Rectangle RadiusY="15" RadiusX="15" Grid.RowSpan="14" Grid.ColumnSpan="6"/>

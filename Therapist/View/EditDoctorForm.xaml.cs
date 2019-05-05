@@ -20,6 +20,7 @@ namespace Therapist.View
     /// </summary>
     public partial class EditDoctorForm : Window, IEditDoctorView
     {
+        public bool Flag = false;
         public EditDoctorForm()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace Therapist.View
                 this.Presenter.Load(doctorId);
             }
         }
+        public EditDoctorForm(bool flag) : this()
+        {
+            Flag = true;
+            this.Presenter.CreateNew(true);
+        }
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {
@@ -46,7 +52,11 @@ namespace Therapist.View
 
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
+            if (Flag == false)
             this.Presenter.Save();
+            else
+                this.Presenter.Save1();
+            this.Close();
         }
         protected void LoadDoctorById(int doctorId)
         {

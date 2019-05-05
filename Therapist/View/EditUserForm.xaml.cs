@@ -39,7 +39,10 @@ namespace Therapist.View
                 this.Presenter.Load(userId);
             }
         }
-
+        public EditUserForm(int doctorId, bool flag ) : this()
+        {
+                this.Presenter.CreateNew(doctorId);
+        }
         private void buttonClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

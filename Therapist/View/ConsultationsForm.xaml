@@ -55,7 +55,7 @@
                 <DataGridTextColumn Header="Дата" Width="auto"
                                     Binding="{Binding  Path=ScheduleDate, StringFormat=\{0:dd.MM.yyyy\}}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Время" Width="auto"
-                                    Binding="{Binding Path=ScheduleTime , StringFormat=\{0:\}}"></DataGridTextColumn> 
+                                    Binding="{Binding Path=ScheduleTime , StringFormat={}{0:hh}:{0:mm}, FallbackValue=00:00}"></DataGridTextColumn> 
                 <!--!!!-->
                 <DataGridTextColumn Header="Врач"  Width="auto"
                                     Binding="{Binding  Path=Doctor.Name}"></DataGridTextColumn>

@@ -27,6 +27,10 @@ namespace Therapist.View
             this.Presenter = new PatientsPresenter(this);
             this.Presenter.LoadAllPatients();
         }
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Presenter.LoadPatientsByCriterias();
+        }
         public PatientsPresenter Presenter { get; set; }
         public string NameSearch
         {
@@ -167,6 +171,20 @@ namespace Therapist.View
         private void dataGridViewResult_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+    }
+    public class NewCustomCommand
+    {
+        private static RoutedUICommand pnvCommand;
+        static NewCustomCommand()
+        {
+            InputGestureCollection inputs = new InputGestureCollection();
+            inputs.Add(new KeyGesture(Key.Enter));
+            pnvCommand = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+        }
+        public static RoutedUICommand PnvCommand
+        {
+            get { return pnvCommand; }
         }
     }
 }

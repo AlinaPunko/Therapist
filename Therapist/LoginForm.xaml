@@ -8,6 +8,9 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="LoginForm" Height="450" Width="350" MouseDown="LoginForm_MouseDown"  WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:NewCustomCommand.PnvCommand" Executed="CommandBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
     <Grid >
 
         <Grid.ColumnDefinitions>

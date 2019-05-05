@@ -41,7 +41,7 @@ namespace Therapist.Logic
         {
             string message = string.Empty;
             bool isValid = IsDataValid(out message);
-            View.Message = message;
+           // View.Message = message;
 
             return isValid;
         }
@@ -122,7 +122,14 @@ namespace Therapist.Logic
             this.User = newUser;
             this.FillView();
         }
-
+        public void CreateNew(int doctorid)
+        {
+            var newUser = new User() {RoleID=2, DoctorID=doctorid, UserName=" " };
+            //var newDoctor = new Doctor() {/* Name = "Нет имени", Number = "Нет номера" */};
+            //newUser.Doctor = newDoctor;
+            this.User = newUser;
+            this.FillView();
+        }
         public void Load(int userId)
         {
             try

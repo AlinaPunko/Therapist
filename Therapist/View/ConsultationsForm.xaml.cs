@@ -21,12 +21,16 @@ namespace Therapist.View
     /// </summary>
     public partial class ConsultationsForm : Window, IConsultationsView
     {
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Presenter.LoadConsultationsByCriterias();
+        }
         public ConsultationsForm()
         {
             InitializeComponent();
             this.Presenter = new ConsultationsPresenter(this);
-            //this.Presenter.LoadConsultationsByCriterias();
-            this.Presenter.LoadAllConsultations();
+            this.Presenter.LoadConsultationsByCriterias();
+            //this.Presenter.LoadAllConsultations();
         }
         public ConsultationsForm(bool choose = true)
         {
@@ -160,6 +164,20 @@ namespace Therapist.View
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+    }
+    public class NewCustomCommand1
+    {
+        private static RoutedUICommand pnvCommand1;
+        static NewCustomCommand1()
+        {
+            InputGestureCollection inputs = new InputGestureCollection();
+            inputs.Add(new KeyGesture(Key.Enter));
+            pnvCommand1 = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+        }
+        public static RoutedUICommand PnvCommand1
+        {
+            get { return pnvCommand1; }
         }
     }
 }

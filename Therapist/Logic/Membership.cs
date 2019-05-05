@@ -59,7 +59,7 @@ namespace Therapist.Logic
             var user = UsersDataAccess.GetUserByName(username);
             LogInUser(user);
 
-            if (Membership.CurrentUser.UserName == username)
+            if (CurrentUser.UserName == username)
             {
                 return true;
             }

@@ -27,6 +27,7 @@ namespace Therapist.View
             this.Presenter = new DoctorsPresenter(this);
             this.Presenter.LoadAllDoctors();
         }
+
         public DoctorsPresenter Presenter { get; set; }
         private void DoctorsForm_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -69,7 +70,7 @@ namespace Therapist.View
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            var editDoctorForm = new EditDoctorForm(0);
+            var editDoctorForm = new EditDoctorForm(true);
             editDoctorForm.ShowDialog();
             this.Presenter.LoadDoctorsByCriterias();
         }
@@ -121,6 +122,7 @@ namespace Therapist.View
             try
             {
                 int doctorId = selectedDoctor.DoctorID;
+                UsersDataAccess.DeleteUserByDoctorId(doctorId);
                 DoctorDataAccess.DeleteDoctorById(doctorId);
                 this.Presenter.LoadAllDoctors();
             }
@@ -172,4 +174,5 @@ namespace Therapist.View
 
         }
     }
+
 }

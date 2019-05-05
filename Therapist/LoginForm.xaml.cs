@@ -29,6 +29,11 @@ namespace Therapist
             InitializeComponent();
             
         }
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            TryLogin();
+        }
+        
         private void LoginForm_MouseDown ( object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -47,7 +52,7 @@ namespace Therapist
             string loginResultMessage = string.Empty;
             if (TryLogin(username, password, out loginResultMessage))
             {
-                VisitsForm a = new VisitsForm();
+                MainWindow a = new MainWindow();
                 a.Show();
                 this.Close();
             }
@@ -90,6 +95,20 @@ namespace Therapist
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+    }
+    public class NewCustomCommand
+    {
+        private static RoutedUICommand pnvCommand;
+        static NewCustomCommand()
+        {
+            InputGestureCollection inputs = new InputGestureCollection();
+            inputs.Add(new KeyGesture(Key.Enter));
+            pnvCommand = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+        }
+        public static RoutedUICommand PnvCommand
+        {
+            get { return pnvCommand; }
         }
     }
 }

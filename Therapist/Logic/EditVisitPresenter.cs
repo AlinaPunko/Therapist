@@ -36,20 +36,29 @@ namespace Therapist.Logic
 
         protected void FillView()
         {
-            int doctorId = Visit.DoctorID.HasValue ? Visit.DoctorID.Value : 0;
-            View.DoctorId = doctorId;
-            var consultationDoctor = DoctorDataAccess.GetDoctorById(doctorId);
-            if (consultationDoctor != null)
+            if (Membership.CurrentUser.RoleID == 2)
             {
-                View.DoctorName = consultationDoctor.Name;
+                int ID = (int)Membership.CurrentUser.DoctorID;
+                Doctor doctor = DoctorDataAccess.GetDoctorById(ID);
+                View.DoctorId = doctor.DoctorID;
+                View.DoctorName = doctor.Name;
             }
             else
             {
-                View.DoctorName = "Не выбран врач";
+                int doctorId = Visit.DoctorID.HasValue ? Visit.DoctorID.Value : 1;
+                View.DoctorId = doctorId;
+                var consultationDoctor = DoctorDataAccess.GetDoctorById(doctorId);
+                if (consultationDoctor != null)
+                {
+                    View.DoctorName = consultationDoctor.Name;
+                }
+                else
+                {
+                    View.DoctorName = "Не выбран врач";
+                }
             }
 
-
-            int patientId = Visit.PatientID.HasValue ? Visit.PatientID.Value : 0;
+            int patientId = Visit.PatientID.HasValue ? Visit.PatientID.Value : 1;
             View.PatientId = patientId;
             var consultationPatient = PatientsDataAccess.GetPatientById(patientId);
             if (consultationPatient != null)

@@ -25,6 +25,18 @@ namespace Therapist.View
         {
             InitializeComponent();
             this.Presenter = new EditVisitPresenter(this);
+            if (Membership.CurrentUser.RoleID==2)
+            {
+                int ID = (int)Membership.CurrentUser.DoctorID;
+                Doctor doctor = DoctorDataAccess.GetDoctorById(ID);
+                this.DoctorId = doctor.DoctorID;
+                this.DoctorName = doctor.Name;
+                labelId.Content= doctor.DoctorID.ToString();
+                buttonLoadDoctor.IsEnabled=false;
+                textBoxDoctorName.Text= doctor.Name;
+
+            }
+
         }
         private void EditVisitForm_MouseDown(object sender, MouseButtonEventArgs e)
         {

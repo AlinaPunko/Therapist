@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Page2">
-
+    <DockPanel>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="17*"/>
@@ -29,4 +29,5 @@
         </TextBlock>
 
     </Grid>
+        </DockPanel>
 </Page>
