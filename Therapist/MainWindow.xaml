@@ -98,6 +98,7 @@
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="PersonAdd" Height="25" Width="25" Foreground="Blue"/>
                             <TextBlock Text="Добавить пользователя" VerticalAlignment="Center"  Margin="20 10"/>
+                                                        <TextBlock Text="Добавить пользователя" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

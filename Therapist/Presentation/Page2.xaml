@@ -5,29 +5,29 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Therapist.Presentation"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="680"
       Title="Page2">
     <DockPanel>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="17*"/>
-            <RowDefinition Height="102*"/>
-            <RowDefinition Height="31*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="134*"/>
-            <ColumnDefinition Width="271*"/>
-            <ColumnDefinition Width="262*"/>
-            <ColumnDefinition Width="120*"/>
-            <ColumnDefinition Width="13*"/>
-        </Grid.ColumnDefinitions>
-        <Image Source="../Picture/Pic1.jpg" Grid.ColumnSpan="5"  Grid.RowSpan="3" />
-        <Rectangle  RadiusY="15" RadiusX="15" Grid.Column="1" Grid.Row="1" Fill="Transparent"/>
-        <TextBlock  FontSize="25.5" Grid.Row="1" FontFamily="Arial"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="17*"/>
+                <RowDefinition Height="102*"/>
+                <RowDefinition Height="31*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="269*"/>
+                <ColumnDefinition Width="223*"/>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="../Picture/Pic1.jpg" Grid.ColumnSpan="5"  Grid.RowSpan="3" />
+            <Rectangle  RadiusY="15" RadiusX="15" Grid.Column="1" Grid.Row="1" Fill="Transparent"/>
+            <TextBlock  FontSize="25" Grid.Row="1" FontFamily="Arial"
                    Style="{DynamicResource MaterialDesignHeadlineTextBlock}" TextWrapping="Wrap" Grid.Column="1" Margin="0,0,5,0">
                 Основной целью создания работы данного программного средства является автоматизация работы врача и уменьшение количества бумажных документов.
-        </TextBlock>
+            </TextBlock>
 
-    </Grid>
-        </DockPanel>
+        </Grid>
+    </DockPanel>
 </Page>

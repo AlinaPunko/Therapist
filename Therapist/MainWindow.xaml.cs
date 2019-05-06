@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Therapist.Data;
 using Therapist.Logic;
 using Therapist.Models;
+using Therapist.Presentation;
 using Therapist.View;
 
 namespace Therapist
@@ -28,7 +29,7 @@ namespace Therapist
         {
             InitializeComponent();
             UserName.Text = Membership.CurrentUser.UserName.ToString();
-            Time.Content = DateTime.Now.TimeOfDay;
+            //Time.Content = DateTime.Now.TimeOfDay;
             if (Membership.CurrentUser.UserID == 2)
             {
                 ItemDoctors.Visibility = Visibility.Collapsed;
@@ -110,7 +111,8 @@ namespace Therapist
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Window1 window = new Window1();
+            window.ShowDialog();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

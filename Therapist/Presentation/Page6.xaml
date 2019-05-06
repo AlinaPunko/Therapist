@@ -1,0 +1,30 @@
+﻿<Page x:Class="Therapist.Presentation.Page6"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Therapist.Presentation"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="Page6">
+
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="18*"/>
+                <ColumnDefinition Width="17*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="../Picture/Pic3.jpg" Grid.ColumnSpan="3"/>
+            <Rectangle  RadiusY="15" RadiusX="15" Grid.Column="1" Grid.ColumnSpan="1" Fill="Transparent" Margin="0,51,0,93" />
+            <TextBlock  FontSize="26" TextWrapping="Wrap"
+                   Style="{DynamicResource MaterialDesignHeadlineTextBlock}"  Grid.Column="1" Margin="0,51,0,0"  >
+               Администратор может делать всё то же самое, плюс добавлять новых пользователей
+            </TextBlock>
+
+        </Grid>
+    </DockPanel>
+</Page>

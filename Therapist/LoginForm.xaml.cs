@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Therapist.Data;
 using Therapist.Logic;
 using Therapist.Models;
+using Therapist.Presentation;
 using Therapist.View;
 
 namespace Therapist
@@ -94,7 +95,8 @@ namespace Therapist
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 window = new Window1();
+            window.ShowDialog();
         }
     }
     public class NewCustomCommand

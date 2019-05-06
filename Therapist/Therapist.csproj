@@ -91,14 +91,8 @@
     <Compile Include="Logic\EditVisitPresenter.cs" />
     <Compile Include="Logic\PatientsPresenter.cs" />
     <Compile Include="Logic\VisitsPresenter.cs" />
-    <Compile Include="Presentation\Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Presentation\Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\Page3.xaml.cs">
-      <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Page4.xaml.cs">
       <DependentUpon>Page4.xaml</DependentUpon>
@@ -106,11 +100,11 @@
     <Compile Include="Presentation\Page5.xaml.cs">
       <DependentUpon>Page5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Slide5.xaml.cs">
-      <DependentUpon>Slide5.xaml</DependentUpon>
+    <Compile Include="Presentation\Page6.xaml.cs">
+      <DependentUpon>Page6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Toolbar.xaml.cs">
-      <DependentUpon>Toolbar.xaml</DependentUpon>
+    <Compile Include="Presentation\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ConsultationsForm.xaml.cs">
       <DependentUpon>ConsultationsForm.xaml</DependentUpon>
@@ -173,15 +167,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Presentation\Page1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Presentation\Page2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Presentation\Page3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,15 +179,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Slide5.xaml">
+    <Page Include="Presentation\Page6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentation\Toolbar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Presentation\General.xaml">
+    <Page Include="Presentation\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
