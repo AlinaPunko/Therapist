@@ -93,9 +93,14 @@ namespace Therapist.Logic
         {
             try
             {
-                if (User.UserID == 0)
+                if (User.UserID == 0 && User.RoleID==2)
                 {
                     User.RoleID = (int)UserRoles.Doctor;
+                    UsersDataAccess.InsertUser(User);
+                }
+                else if (User.UserID == 0 && User.RoleID == 1)
+                {
+                    User.RoleID = (int)UserRoles.Admin;
                     UsersDataAccess.InsertUser(User);
                 }
                 else
@@ -116,15 +121,13 @@ namespace Therapist.Logic
 
         public void CreateNew()
         {
-            var newUser = new User();
-            var newDoctor = new Doctor() {/* Name = "Нет имени", Number = "Нет номера" */};
-            newUser.Doctor = newDoctor;
+            var newUser = new User() { RoleID = 1, UserName = " " };
             this.User = newUser;
             this.FillView();
         }
         public void CreateNew(int doctorid)
         {
-            var newUser = new User() {RoleID=2, DoctorID=doctorid, UserName=" " };
+            var newUser = new User() {RoleID=2, DoctorID=doctorid, UserName="" };
             //var newDoctor = new Doctor() {/* Name = "Нет имени", Number = "Нет номера" */};
             //newUser.Doctor = newDoctor;
             this.User = newUser;

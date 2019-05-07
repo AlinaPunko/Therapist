@@ -30,7 +30,7 @@
     </Window.Triggers>
     <Grid Background="#FFDEDEDE">
         <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="380" Width="870"/>
-        <Image Source="Picture/Pic1.jpg"></Image>
+        <Image Source="Picture/Pic4.jpg"/>
         <Grid Height="40" VerticalAlignment="Top" Background="#FF5C99D6">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
@@ -98,7 +98,12 @@
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="PersonAdd" Height="25" Width="25" Foreground="Blue"/>
                             <TextBlock Text="Добавить пользователя" VerticalAlignment="Center"  Margin="20 10"/>
-                                                        <TextBlock Text="Добавить пользователя" VerticalAlignment="Center"  Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemAddAdmin" Height="50" >
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="PersonAddOutline" Height="25" Width="25" Foreground="Blue"/>
+                            <TextBlock Text="Добавить администратора" VerticalAlignment="Center"  Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

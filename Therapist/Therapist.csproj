@@ -274,6 +274,7 @@
   <ItemGroup>
     <Content Include="Data\Model1.edmx.sql" />
     <Content Include="Data\Therapist.edmx.sql" />
+    <Resource Include="Picture\Pic4.jpg" />
     <Resource Include="Picture\Pic1.jpg" />
     <Resource Include="Picture\Pic2.jpg" />
     <Resource Include="Picture\Pic3.jpg" />

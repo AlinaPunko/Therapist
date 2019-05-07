@@ -96,6 +96,13 @@ namespace Therapist
                         newForm.ShowDialog();
                         break;
                     }
+                case "ItemAddAdmin":
+                    {
+                        EditUserForm newForm = new EditUserForm(0);
+                        // newForm.Topmost = true;
+                        newForm.ShowDialog();
+                        break;
+                    }
                 default:
                     break;
             }
