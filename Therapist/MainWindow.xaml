@@ -10,12 +10,12 @@
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
                 <EasingDoubleKeyFrame KeyTime="0" Value="40"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="200"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="CloseMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
-                <EasingDoubleKeyFrame KeyTime="0" Value="150"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="200"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="40"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -38,7 +38,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Name ="UserName" Text="" VerticalAlignment="Center" FontSize="16"/>
                 <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10,5,10,10">
-                    <StackPanel Width="170">
+                    <StackPanel Width="175">
                         <Button Content="Выйти из аккаунта" Click="Button_Click"/>
                         <Button Content="Помощь" Click="Button_Click_1"/>
                         <Separator/>
@@ -73,41 +73,43 @@
                     <ListViewItem x:Name="ItemPatients" Height="50" >
                         <StackPanel Orientation="Horizontal" >
                             <materialDesign:PackIcon Kind="Man" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Пациенты" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Пациенты" VerticalAlignment="Center" Margin="5 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemVisits" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Note" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Визиты" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Визиты" VerticalAlignment="Center" Margin="5 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemConsultations" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Book" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Консультации" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="Консультации" VerticalAlignment="Center"  Margin="5 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemDoctors" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Doctor" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Доктора" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="Доктора" VerticalAlignment="Center"  Margin="5 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemAddDoctor" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="PersonAdd" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Добавить пользователя" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="Добавить  пользователя" VerticalAlignment="Center"  Margin="5 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemAddAdmin" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="PersonAddOutline" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Добавить администратора" VerticalAlignment="Center"  Margin="20 10"/>
+                            <TextBlock Text="Добавить администратора" VerticalAlignment="Center"  Margin="5 10"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
             </StackPanel>
         </Grid>
+        <TextBlock Name="Time" HorizontalAlignment="Left" Height="40" Margin="360,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="30" TextAlignment="Center"/>
+        <TextBlock Name="Date" HorizontalAlignment="Left" Height="50" Margin="325,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontSize="26"/>
     </Grid>
 </Window> 

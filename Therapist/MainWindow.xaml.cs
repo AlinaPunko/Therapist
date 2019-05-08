@@ -28,6 +28,8 @@ namespace Therapist
         public MainWindow()
         {
             InitializeComponent();
+            //Date.Text = DateTime.Now.Date.ToString("dd.MM.yyy");
+            //Time.Text = DateTime.Now.TimeOfDay.ToString();
             UserName.Text = Membership.CurrentUser.UserName.ToString();
             //Time.Content = DateTime.Now.TimeOfDay;
             if (Membership.CurrentUser.UserID == 2)
