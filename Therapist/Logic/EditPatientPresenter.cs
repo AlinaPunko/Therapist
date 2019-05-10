@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using Therapist.Data;
@@ -60,7 +61,7 @@ namespace Therapist.Logic
         {
             message = string.Empty;
             bool isValid = true;
-
+            string _regex = @"\d{13}";
             if (String.IsNullOrEmpty(Patient.Name))
             {
                 message += String.Format("Поле '{0}' пусто!\n", "Имя");
@@ -70,6 +71,16 @@ namespace Therapist.Logic
             if (String.IsNullOrEmpty(Patient.PatientID.ToString()))
             {
                 message += String.Format("Поле '{0}' пусто!\n", "Номер ");
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(Patient.Address))
+            {
+                message += String.Format("Поле '{0}' пусто!\n", "Адрес ");
+                isValid = false;
+            }
+            if (!Regex.IsMatch(Patient.Phone, _regex))
+            {
+                message += String.Format("Неверный формат телефона");
                 isValid = false;
             }
 
@@ -86,6 +97,7 @@ namespace Therapist.Logic
                 SaveModel(Patient);
                 FillView();
             }
+            else MessageBox.Show("Проблема");
         }
 
         private void SaveModel(Patient model)

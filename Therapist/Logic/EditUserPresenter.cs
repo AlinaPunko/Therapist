@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Therapist.Data;
 using Therapist.Models;
 using Therapist.View;
@@ -65,7 +66,7 @@ namespace Therapist.Logic
 
             if (User.Password.Length < 3)
             {
-                message += String.Format("Поле '{0}' должно быть больше 2!\n", "Пароль");
+                message += String.Format("Поле '{0}' должно быть длиннее 2!\n", "Пароль");
                 isValid = false;
             }
 
@@ -87,6 +88,7 @@ namespace Therapist.Logic
                 SaveModel(User);
                 FillView();
             }
+            else MessageBox.Show("Проблема");
         }
 
         private void SaveModel(User model)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using Therapist.Data;
@@ -55,14 +56,28 @@ namespace Therapist.Logic
         {
             message = string.Empty;
             bool isValid = true;
-
+            string _regex = @"\d{13}";
 
             if (String.IsNullOrEmpty(Doctor.Name))
             {
                 message += String.Format("Поле '{0}' пусто!\n", "Имя");
                 isValid = false;
             }
-
+            if (String.IsNullOrEmpty(Doctor.Address))
+            {
+                message += String.Format("Поле '{0}' пусто!\n", "Адрес");
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(Doctor.Skils))
+            {
+                message += String.Format("Поле '{0}' пусто!\n", "Опыт");
+                isValid = false;
+            }
+            if (!Regex.IsMatch(Doctor.Phone, _regex))
+            {
+                message += String.Format("Неверный формат телефона");
+                isValid = false;
+            }
             return isValid;
         }
 
@@ -76,9 +91,11 @@ namespace Therapist.Logic
                 MessageBox.Show("Успешно");
                 SaveModel(Doctor);
                 FillView();
-               
             }
-            
+            else
+            { MessageBox.Show("Проблема");
+                FillView();
+            }
         }
         public void Save1()
         {
@@ -93,7 +110,7 @@ namespace Therapist.Logic
                 EditUserForm editUserForm = new EditUserForm(Doctor.DoctorID, true);
                 editUserForm.Show();
             }
-
+            else MessageBox.Show("Проблема");
         }
 
         private void SaveModel(Doctor model)
