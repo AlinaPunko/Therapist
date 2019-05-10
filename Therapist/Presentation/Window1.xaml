@@ -4,15 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Therapist.Presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="600">
+        Title="Window1" Height="450" Width="600" AllowsTransparency="True" WindowStyle="None" >
     <Grid>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="Aquamarine">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="83*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Padding="0"
+                Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Grid.Column="1" >
+            <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
+        </Button>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="Aquamarine" Grid.ColumnSpan="2">
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White"  Content="Слайд 1" Click="Button_Click"/>
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 2" Click="Button_Click_1"/>
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 3" Click="Button_Click_2"/>
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 4" Click="Button_Click_3"/>
         </StackPanel>
-        <Frame Name="Main" Margin="0,35,0,0" Background="Aquamarine"/>
+        <Frame Name="Main" Background="Aquamarine" Grid.ColumnSpan="2" Grid.Row="1"/>
     </Grid>
 </Window>

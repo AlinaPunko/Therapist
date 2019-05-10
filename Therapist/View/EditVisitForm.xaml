@@ -8,6 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="LoginForm" MouseDown="EditVisitForm_MouseDown" Height="450" Width="916"  WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    
     <Grid>
         <Grid.RowDefinitions>
 

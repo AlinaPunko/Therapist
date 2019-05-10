@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Therapist"
         xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local1="clr-namespace:Therapist.View"
         mc:Ignorable="d"
         Title="LoginForm" Height="450" MouseDown="EditDoctorForm_MouseDown" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="35"/>
@@ -39,19 +41,17 @@
         <Label x:Name="label6" Foreground="Black" Content="№." Grid.Column="2" Grid.Row="3" Height="27" Width="18" Margin="1,0,0,0"/>
         <Label x:Name="labelId" Foreground="Black" Content="0" Grid.Column="3"  Grid.Row="3" Height="27" Width="16" Margin="1,0,3,0"/>
         <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Foreground="Blue" Margin="4,4,0,3" Height="26" Width="25" Grid.Column="1" Grid.Row="4"/>
-        <TextBox x:Name="textBoxName" BorderBrush="Blue" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя" Foreground="Black"  Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="3" Height="34" VerticalAlignment="Bottom" Margin="0,0,34,0" Grid.RowSpan="2"/>
-        <Label x:Name="label7" Foreground="Black" Content="*" Grid.Column="7" Grid.Row="4" Height="26" Margin="10,0" Width="15" />
-
+        <TextBox x:Name="textBoxName" BorderBrush="Blue" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя" Foreground="Black"  Grid.ColumnSpan="5" Grid.Column="2" Grid.Row="3" Height="34" VerticalAlignment="Bottom"  Grid.RowSpan="2">
+        </TextBox>
         <materialDesign:PackIcon Kind="Phone" VerticalAlignment="Center" Foreground="Blue" Margin="4,9,0,2" Height="24" Width="25" Grid.Column="1" Grid.Row="5"/>
-        <TextBox x:Name="textBoxPhone" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Телефон" Foreground="Black" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="5" Margin="0,0,34,0"/>
-
+        <TextBox x:Name="textBoxPhone" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Телефон" Foreground="Black" Grid.ColumnSpan="5" Grid.Column="2" Grid.Row="5" >
+        </TextBox>
         <materialDesign:PackIcon Kind="SecurityHome" VerticalAlignment="Center" Foreground="Blue" Margin="4,6,0,8" Grid.Column="1" Grid.Row="6" Height="24" Width="25" RenderTransformOrigin="0.419,0.8"/>
-        <TextBox x:Name="textBoxAddress" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Адрес" Foreground="Black" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="6" Margin="0,0,34,0"/>
-
+        <TextBox x:Name="textBoxAddress" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Адрес" Foreground="Black" Grid.ColumnSpan="5" Grid.Column="2" Grid.Row="6" >
+        </TextBox>
         <materialDesign:PackIcon Kind="School" VerticalAlignment="Center" Foreground="Blue" Margin="4,6,0,6" Grid.Column="1" Grid.Row="7" Height="26" Width="25"/>
-        <TextBox x:Name="textBoxSkills" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Квалификация" Foreground="Black" Grid.ColumnSpan="6" Grid.Column="2" Grid.Row="7" Margin="0,0,34,0"/>
-
-
+        <TextBox x:Name="textBoxSkills" BorderBrush="Blue" TextWrapping="Wrap"  materialDesign:HintAssist.Hint="Квалификация" Foreground="Black" Grid.ColumnSpan="5" Grid.Column="2" Grid.Row="7">
+        </TextBox>
 
         <WrapPanel Grid.ColumnSpan="6" Grid.Column="1"  Grid.Row="9">
             <Button x:Name="buttonSave" Content="Сохранить" ToolTip="Записать"  FontSize="18" Width="140" BorderBrush="#FF307CD6"  Click="buttonSave_Click" Height="38" />

@@ -21,10 +21,7 @@ namespace Therapist.View
     /// </summary>
     public partial class ConsultationsForm : Window, IConsultationsView
     {
-        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            this.Presenter.LoadConsultationsByCriterias();
-        }
+
         public ConsultationsForm()
         {
             InitializeComponent();
@@ -165,19 +162,15 @@ namespace Therapist.View
         {
             this.Close();
         }
-    }
-    public class NewCustomCommand1
-    {
-        private static RoutedUICommand pnvCommand1;
-        static NewCustomCommand1()
+
+        private void dateTimePickerFrom_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            InputGestureCollection inputs = new InputGestureCollection();
-            inputs.Add(new KeyGesture(Key.Enter));
-            pnvCommand1 = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+            this.Presenter.LoadConsultationsByCriterias();
         }
-        public static RoutedUICommand PnvCommand1
+
+        private void dateTimePickerTo_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            get { return pnvCommand1; }
+            this.Presenter.LoadConsultationsByCriterias();
         }
     }
 }

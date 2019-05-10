@@ -36,6 +36,7 @@ namespace Therapist
             {
                 ItemDoctors.Visibility = Visibility.Collapsed;
                 ItemAddDoctor.Visibility = Visibility.Collapsed;
+                ItemAddAdmin.Visibility = Visibility.Collapsed;
             }
         
         }

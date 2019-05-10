@@ -164,5 +164,23 @@ namespace Therapist.View
         {
             this.Close();
         }
+        private void CommandBinding1_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void textBoxReason_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            this.Presenter.LoadVisitsByCriterias();
+        }
+
+        private void dateTimePickerFrom_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.Presenter.LoadVisitsByCriterias();
+        }
+
+        private void dateTimePickerTo_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.Presenter.LoadVisitsByCriterias();
+        }
     }
 }

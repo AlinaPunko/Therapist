@@ -9,10 +9,10 @@
         mc:Ignorable="d"
         Title="LoginForm" Height="450" Width="350" MouseDown="LoginForm_MouseDown"  WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
     <Window.CommandBindings>
-        <CommandBinding Command="local:NewCustomCommand.PnvCommand" Executed="CommandBinding_Executed"></CommandBinding>
+        <!--<CommandBinding Command="local:NewCustomCommand.CloseCommand" Executed="CommandBinding2_Executed"/>-->
+        <CommandBinding Command="local:NewCustomCommand.EnterCommand" Executed="CommandBinding1_Executed"/>
     </Window.CommandBindings>
     <Grid >
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="52"/>
             <ColumnDefinition Width="28"/>
@@ -34,7 +34,7 @@
             <RowDefinition Height="35"/>
             <RowDefinition Height="19"/>
         </Grid.RowDefinitions>
-        <Rectangle  Grid.ColumnSpan="7"  Grid.RowSpan="10" Margin="0,0,0,-7" />
+        <Rectangle  Grid.ColumnSpan="7"  Grid.RowSpan="10" Margin="0,0,0,-7"   />
         <!--<Menu Name="Languages"  Background="{x:Null}"   Grid.ColumnSpan="3">
             <MenuItem Name="Русский" Click="OnLanguageChange" HorizontalContentAlignment="Center" Width="42" Height="25"/>
             <MenuItem x:Name="English" Click="OnLanguageChange" HorizontalContentAlignment="Center" Width="50" Height="25" />

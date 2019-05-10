@@ -28,6 +28,11 @@ namespace Therapist.Presentation
         {
             Main.Content = new Page2();
         }
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Close();
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {

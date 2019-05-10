@@ -78,11 +78,11 @@ namespace Therapist.Logic
                 message += String.Format("Поле '{0}' пусто!\n", "Адрес ");
                 isValid = false;
             }
-            if (!Regex.IsMatch(Patient.Phone, _regex))
-            {
-                message += String.Format("Неверный формат телефона");
-                isValid = false;
-            }
+            //if (!Regex.IsMatch(Patient.Phone, _regex))
+            //{
+            //    message += String.Format("Неверный формат телефона");
+            //    isValid = false;
+            //}
 
             return isValid;
         }

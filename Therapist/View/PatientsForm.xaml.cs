@@ -172,19 +172,14 @@ namespace Therapist.View
         {
 
         }
-    }
-    public class NewCustomCommand
-    {
-        private static RoutedUICommand pnvCommand;
-        static NewCustomCommand()
+        private void CommandBinding1_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            InputGestureCollection inputs = new InputGestureCollection();
-            inputs.Add(new KeyGesture(Key.Enter));
-            pnvCommand = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+            this.Close();
         }
-        public static RoutedUICommand PnvCommand
+        private void textBoxName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            get { return pnvCommand; }
+            this.Presenter.LoadPatientsByCriterias();
         }
     }
+    
 }

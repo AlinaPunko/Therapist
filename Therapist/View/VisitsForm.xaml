@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Диагнозы" MouseDown="VisitsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
-   
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30*"/>
@@ -48,10 +48,10 @@
         </Button>
 
         <materialDesign:PackIcon Kind="BookPlus" Foreground="Blue" Height="30" Width="22" Grid.Row="4" Grid.Column="1" />
-        <TextBox x:Name="textBoxReason" BorderBrush="Blue" HorizontalAlignment="Left" Height="29" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Название(диагноза)" Foreground="Black" VerticalAlignment="Top" Width="143" Grid.ColumnSpan="3" Grid.Row="4"  Grid.Column="2" Margin="1,2,0,0"/>
-        <DatePicker x:Name="dateTimePickerFrom" BorderBrush="Blue" materialDesign:HintAssist.Hint="От даты"  Height="26" 
+        <TextBox x:Name="textBoxReason" BorderBrush="Blue" HorizontalAlignment="Left" Height="29" TextChanged="textBoxReason_TextChanged" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Название(диагноза)" Foreground="Black" VerticalAlignment="Top" Width="143" Grid.ColumnSpan="3" Grid.Row="4"  Grid.Column="2" Margin="1,2,0,0"/>
+        <DatePicker x:Name="dateTimePickerFrom" BorderBrush="Blue" materialDesign:HintAssist.Hint="От даты"  Height="26" SelectedDateChanged="dateTimePickerFrom_SelectedDateChanged"
                     Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,20,0,0"   />
-        <DatePicker x:Name="dateTimePickerTo" BorderBrush="Blue" materialDesign:HintAssist.Hint="До даты"  Height="34" 
+        <DatePicker x:Name="dateTimePickerTo" BorderBrush="Blue" materialDesign:HintAssist.Hint="До даты"  Height="34" SelectedDateChanged="dateTimePickerTo_SelectedDateChanged"
                     VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" />
 
         <Button x:Name="buttonSearch" ToolTip="Искать визит"  Content="Поиск" Click="buttonSearch_Click" Grid.Row="9" Grid.Column="2"   Height="Auto"/>

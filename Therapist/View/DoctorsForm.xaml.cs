@@ -173,6 +173,12 @@ namespace Therapist.View
         {
 
         }
+
+
+        private void textBoxSubject_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            this.Presenter.LoadDoctorsByCriterias();
+        }
     }
 
 }

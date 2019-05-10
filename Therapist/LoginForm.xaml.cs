@@ -30,11 +30,14 @@ namespace Therapist
             InitializeComponent();
             
         }
-        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void CommandBinding1_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             TryLogin();
         }
-        
+        //private void CommandBinding2_Executed(object sender, ExecutedRoutedEventArgs e)
+        //{
+        //    this.Close();
+        //}
         private void LoginForm_MouseDown ( object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -101,16 +104,24 @@ namespace Therapist
     }
     public class NewCustomCommand
     {
-        private static RoutedUICommand pnvCommand;
+        private static RoutedUICommand enterCommand;
         static NewCustomCommand()
         {
             InputGestureCollection inputs = new InputGestureCollection();
             inputs.Add(new KeyGesture(Key.Enter));
-            pnvCommand = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+            enterCommand = new RoutedUICommand("PNV1", "PNV1", typeof(NewCustomCommand), inputs);
+            //inputs.Add(new KeyGesture(Key.Escape));
+            //closeCommand = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
         }
-        public static RoutedUICommand PnvCommand
+        public static RoutedUICommand EnterCommand
         {
-            get { return pnvCommand; }
+            get { return enterCommand; }
         }
+        //private static RoutedUICommand closeCommand;
+       
+        //public static RoutedUICommand CloseCommand
+        //{
+        //    get { return closeCommand; }
+        //}
     }
 }
