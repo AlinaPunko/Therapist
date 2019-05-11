@@ -113,7 +113,16 @@ namespace Therapist.Logic
                 message += String.Format("Поле '{0}' пусто!\n", "Врач");
                 isValid = false;
             }
-
+            if (String.IsNullOrEmpty(Visit.Reason))
+            {
+                message += String.Format("Поле '{0}' пусто!\n", "Диагноз");
+                isValid = false;
+            }
+            if (String.IsNullOrEmpty(Visit.Notes))
+            {
+                message += String.Format("Поле '{0}' пусто!\n", "Симптомы");
+                isValid = false;
+            }
             return isValid;
         }
 

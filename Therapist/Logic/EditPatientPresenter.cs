@@ -61,7 +61,7 @@ namespace Therapist.Logic
         {
             message = string.Empty;
             bool isValid = true;
-            string _regex = @"\d{13}";
+            string _regex = @"\d{12}";
             if (String.IsNullOrEmpty(Patient.Name))
             {
                 message += String.Format("Поле '{0}' пусто!\n", "Имя");
@@ -78,11 +78,11 @@ namespace Therapist.Logic
                 message += String.Format("Поле '{0}' пусто!\n", "Адрес ");
                 isValid = false;
             }
-            //if (!Regex.IsMatch(Patient.Phone, _regex))
-            //{
-            //    message += String.Format("Неверный формат телефона");
-            //    isValid = false;
-            //}
+            if (!Regex.IsMatch(Patient.Phone, _regex))
+            {
+                message += String.Format("Неверный формат телефона");
+                isValid = false;
+            }
 
             return isValid;
         }

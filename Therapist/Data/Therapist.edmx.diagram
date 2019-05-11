@@ -4,16 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a18d1f8b1e1b49e78188a5e13a837530" Name="Diagram1" ZoomLevel="124" >
-        <EntityTypeShape EntityType="Therapist.Consultation" Width="1.5" PointX="1.5" PointY="0.875" />
-        <EntityTypeShape EntityType="Therapist.Visit" Width="1.5" PointX="5.25" PointY="4.625" />
-        <EntityTypeShape EntityType="Therapist.Doctor" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Therapist.Patient" Width="1.5" PointX="5.25" PointY="1.375" />
-        <EntityTypeShape EntityType="Therapist.User" Width="1.5" PointX="2.875" PointY="7.125" />
+      <Diagram DiagramId="a18d1f8b1e1b49e78188a5e13a837530" Name="Diagram1" ZoomLevel="90" >
+        <EntityTypeShape EntityType="Therapist.Consultation" Width="1.5" PointX="2" PointY="2.25" />
+        <EntityTypeShape EntityType="Therapist.Visit" Width="1.5" PointX="5.5" PointY="5.375" />
+        <EntityTypeShape EntityType="Therapist.Doctor" Width="1.5" PointX="3.5" PointY="5.375" />
+        <EntityTypeShape EntityType="Therapist.Patient" Width="1.5" PointX="6.5" PointY="2.25" />
+        <EntityTypeShape EntityType="Therapist.User" Width="1.5" PointX="4.5" PointY="2.25" />
         <AssociationConnector Association="Therapist.FK_Consultations_Doctors" />
-        <AssociationConnector Association="Therapist.FK_Consultations_Patients" />
+        <AssociationConnector Association="Therapist.FK_Consultations_Patients" ManuallyRouted="true" >
+          <ConnectorPoint PointX="8" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="8.4049275172963611" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="8.4049275172963611" PointY="1.8478196686590209" />
+          <ConnectorPoint PointX="1.5063043323333867" PointY="1.8478196686590209" />
+          <ConnectorPoint PointX="1.5063043323333867" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="2" PointY="4.5499886067708326" />
+        </AssociationConnector>
         <AssociationConnector Association="Therapist.FK_Visits_Doctors" />
-        <AssociationConnector Association="Therapist.FK_Visits_Patients" />
+        <AssociationConnector Association="Therapist.FK_Visits_Patients" ManuallyRouted="false" >
+        </AssociationConnector>
         <AssociationConnector Association="Therapist.FK_User_Doctor" />
       </Diagram>
     </edmx:Diagrams>

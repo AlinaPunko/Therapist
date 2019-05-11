@@ -122,6 +122,11 @@ namespace Therapist.Logic
                 message += String.Format("Поле '{0}' пусто!\n", "Врач");
                 isValid = false;
             }
+            if (String.IsNullOrEmpty(Consultation.Reason))
+            {
+                message += String.Format("Поле '{0}' пусто!\n", "Причина");
+                isValid = false;
+            }
 
             return isValid;
         }
