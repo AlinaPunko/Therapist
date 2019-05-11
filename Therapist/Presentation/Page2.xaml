@@ -24,7 +24,7 @@
             <Image Source="../Picture/Pic1.jpg" Grid.ColumnSpan="5"  Grid.RowSpan="3" />
             <Rectangle  RadiusY="15" RadiusX="15" Grid.Column="1" Grid.Row="1" Fill="Transparent"/>
             <TextBlock  FontSize="25" Grid.Row="1" FontFamily="Arial"
-                   Style="{DynamicResource MaterialDesignHeadlineTextBlock}" TextWrapping="Wrap" Grid.Column="1" Margin="0,0,5,0">
+                   Style="{DynamicResource MaterialDesignHeadlineTextBlock}" TextWrapping="Wrap" Grid.Column="2" Margin="2,13,59,80" Grid.ColumnSpan="2" Grid.RowSpan="2">
                 Основной целью создания работы данного программного средства является автоматизация работы врача и уменьшение количества бумажных документов.
             </TextBlock>
 

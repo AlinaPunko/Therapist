@@ -37,6 +37,7 @@ namespace Therapist
                 ItemDoctors.Visibility = Visibility.Collapsed;
                 ItemAddDoctor.Visibility = Visibility.Collapsed;
                 ItemAddAdmin.Visibility = Visibility.Collapsed;
+                ItemAddPatient.Visibility = Visibility.Collapsed;
             }
         
         }
@@ -102,6 +103,13 @@ namespace Therapist
                 case "ItemAddAdmin":
                     {
                         EditUserForm newForm = new EditUserForm(0);
+                        // newForm.Topmost = true;
+                        newForm.ShowDialog();
+                        break;
+                    }
+                case "ItemAddPatient":
+                    {
+                        EditPatientForm newForm = new EditPatientForm(0);
                         // newForm.Topmost = true;
                         newForm.ShowDialog();
                         break;

@@ -256,6 +256,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Therapist.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Data\ClassDiagram1.cd" />
     <None Include="Data\Therapist.edmx.diagram">
       <DependentUpon>Therapist.edmx</DependentUpon>
     </None>

@@ -73,37 +73,43 @@
                     <ListViewItem x:Name="ItemPatients" Height="50" >
                         <StackPanel Orientation="Horizontal" >
                             <materialDesign:PackIcon Kind="Man" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Пациенты" VerticalAlignment="Center" Margin="5 10"/>
+                            <TextBlock Text="Пациенты" VerticalAlignment="Center" Margin="5 10" Foreground="Blue"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemVisits" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Note" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Визиты" VerticalAlignment="Center" Margin="5 10"/>
+                            <TextBlock Text="Визиты" VerticalAlignment="Center" Margin="5 10" Foreground="Blue"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemConsultations" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Book" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Консультации" VerticalAlignment="Center"  Margin="5 10"/>
+                            <TextBlock Text="Консультации" VerticalAlignment="Center"  Margin="5 10" Foreground="Blue"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemDoctors" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Doctor" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Доктора" VerticalAlignment="Center"  Margin="5 10"/>
+                            <TextBlock Text="Доктора" VerticalAlignment="Center"  Margin="5 10" Foreground="Blue"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemAddDoctor" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="PersonAdd" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Добавить  пользователя" VerticalAlignment="Center"  Margin="5 10"/>
+                            <TextBlock Text="Добавить  пользователя" VerticalAlignment="Center"  Margin="5 10" Foreground="Blue"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemAddAdmin" Height="50" >
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="PersonAddOutline" Height="25" Width="25" Foreground="Blue"/>
-                            <TextBlock Text="Добавить администратора" VerticalAlignment="Center"  Margin="5 10"/>
+                            <TextBlock Text="Добавить администратора" VerticalAlignment="Center"  Margin="5 10" Foreground="Blue"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemAddPatient" Height="50" >
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Person" Height="25" Width="25" Foreground="Blue"/>
+                            <TextBlock Text="Добавить пациента" VerticalAlignment="Center"  Margin="5 10" Foreground="Blue"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

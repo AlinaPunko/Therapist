@@ -16,15 +16,15 @@
             <ColumnDefinition Width="14*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Padding="0"
-                Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Grid.Column="1" >
-            <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
-        </Button>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="Aquamarine" Grid.ColumnSpan="2">
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White"  Content="Слайд 1" Click="Button_Click"/>
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 2" Click="Button_Click_1"/>
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 3" Click="Button_Click_2"/>
             <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 4" Click="Button_Click_3"/>
+            <Button x:Name="ButtonClose"  Background="{x:Null}" BorderBrush="{x:Null}" 
+                Click="buttonCancel_Click" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center"  >
+                <materialDesign:PackIcon Kind="Power"  Foreground="Black"  HorizontalAlignment="Center" />
+            </Button>
         </StackPanel>
         <Frame Name="Main" Background="Aquamarine" Grid.ColumnSpan="2" Grid.Row="1"/>
     </Grid>

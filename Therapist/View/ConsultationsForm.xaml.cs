@@ -163,14 +163,5 @@ namespace Therapist.View
             this.Close();
         }
 
-        private void dateTimePickerFrom_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.Presenter.LoadConsultationsByCriterias();
-        }
-
-        private void dateTimePickerTo_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.Presenter.LoadConsultationsByCriterias();
-        }
     }
 }

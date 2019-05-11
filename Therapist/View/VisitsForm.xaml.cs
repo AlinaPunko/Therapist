@@ -173,14 +173,6 @@ namespace Therapist.View
             this.Presenter.LoadVisitsByCriterias();
         }
 
-        private void dateTimePickerFrom_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.Presenter.LoadVisitsByCriterias();
-        }
-
-        private void dateTimePickerTo_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            this.Presenter.LoadVisitsByCriterias();
-        }
+       
     }
 }
