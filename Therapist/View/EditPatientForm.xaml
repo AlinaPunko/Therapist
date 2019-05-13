@@ -34,7 +34,7 @@
             <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
         </Button>
         <Label x:Name="labelMessage" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="170" Grid.ColumnSpan="3" Grid.Row="7" Grid.Column="1" Height="27"/>
-        <Label x:Name="labelHeaderText" Content="    Просмотр и &#xA; редактирование &#xA;    информации &#xA;      пациента" FontFamily="Segoe UI Black" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.ColumnSpan="4" Height="138" Grid.RowSpan="2" Width="207" Margin="2,0,0,0" />
+        <Label x:Name="labelHeaderText" HorizontalContentAlignment="Center" Content="    Просмотр и &#xA; редактирование &#xA;    информации &#xA;      пациента"  FontSize="24"  Grid.ColumnSpan="4"  Grid.RowSpan="2" />
         <Label x:Name="label6" Content="№." Height="29" Width="30" FontSize="16" Grid.Column="1" Margin="3,93,137,0" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <Label x:Name="labelId" Content="0" FontSize="16" Grid.Column="2" Margin="15,93,109,0" Grid.Row="1" Grid.RowSpan="2" Height="29" Width="20" />
         <materialDesign:PackIcon Kind="User"  Foreground="blue" Grid.Column="1" Margin="0,5,0,0" Grid.Row="3" Height="25" Width="30" Grid.ColumnSpan="2"/>

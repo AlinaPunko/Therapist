@@ -9,7 +9,7 @@
         xmlns:local1="clr-namespace:Therapist.View"
         mc:Ignorable="d"
         Title="LoginForm" Height="450" MouseDown="EditDoctorForm_MouseDown" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="35"/>
@@ -36,7 +36,7 @@
         </Grid.RowDefinitions>
         <Rectangle RadiusX="15" RadiusY="15" Grid.ColumnSpan="8"  Grid.RowSpan="11" />
         <Image Grid.Column="4" Name="img1" Source="/Picture/doctor (2).png"  Grid.Row="2" Grid.RowSpan="1" />
-        <Label Content="Данные Доктора" FontFamily="Segoe UI Black" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Grid.ColumnSpan="3" Height="38" Width="178" Grid.Column="3" Grid.Row="1" Margin="1,0,0,0" />
+        <Label Content="Данные Доктора"  FontSize="22" HorizontalContentAlignment="Center"  Foreground="Black" Grid.ColumnSpan="3" Height="38" Width="190" Grid.Column="3" Grid.Row="1"/>
 
         <Label x:Name="label6" Foreground="Black" Content="№." Grid.Column="2" Grid.Row="3" Height="27" Width="18" Margin="1,0,0,0"/>
         <Label x:Name="labelId" Foreground="Black" Content="0" Grid.Column="3"  Grid.Row="3" Height="27" Width="16" Margin="1,0,3,0"/>

@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="PatientsForm" MouseDown="PatientsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="28*"/>
@@ -55,9 +55,8 @@
                                     Binding="{Binding Path=Birthdate, StringFormat=\{0:dd.MM.yyyy \}}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Поиск &#xD;Пациентов" FontFamily="Segoe UI Black" FontSize="24"
-               HorizontalAlignment="Center" Foreground="Black" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Column="1" Width="166" Height="74"/>
-        <Button x:Name="button" BorderBrush="{x:Null}" Padding="0" Height="Auto"  Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Margin="0,0,0,55">
+        <Label Content="Поиск &#xD;Пациентов"  FontSize="24" HorizontalAlignment="Center" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Column="1" HorizontalContentAlignment="Center" Margin="0,0,1,0" Width="165"/>
+        <Button x:Name="button" BorderBrush="{x:Null}" Padding="0" Height="Auto"  Grid.Column="2" Grid.Row="2" >
             <Button.Background>
                 <ImageBrush ImageSource="../Picture/hands.png"  Stretch="UniformToFill"/>
             </Button.Background>

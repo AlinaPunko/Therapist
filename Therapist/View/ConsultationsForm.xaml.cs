@@ -21,7 +21,10 @@ namespace Therapist.View
     /// </summary>
     public partial class ConsultationsForm : Window, IConsultationsView
     {
-
+        private void CommandBinding1_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            this.Presenter.LoadConsultationsByCriterias();
+        }
         public ConsultationsForm()
         {
             InitializeComponent();

@@ -67,6 +67,11 @@ namespace Therapist.Logic
                 message += String.Format("Поле '{0}' пусто!\n", "Имя");
                 isValid = false;
             }
+            if (Patient.Birthdate.Value.Year<1920 || Patient.Birthdate.Value>DateTime.Now.Date)
+            {
+                message += String.Format("Поле '{0}' имеет неверный формат!\n", "Дата рождения");
+                isValid = false;
+            }
 
             if (String.IsNullOrEmpty(Patient.PatientID.ToString()))
             {

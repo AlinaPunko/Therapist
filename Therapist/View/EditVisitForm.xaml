@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="LoginForm" MouseDown="EditVisitForm_MouseDown" Height="450" Width="916"  WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    
+
     <Grid>
         <Grid.RowDefinitions>
 
@@ -49,7 +49,7 @@
             </Button.Background>
         </Button>
 
-        <Label Content="Визит" FontFamily="Segoe UI Black" FontSize="24"  VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" Height="55" Width="183" Grid.ColumnSpan="5" Grid.RowSpan="4" Margin="10,10,0,0"/>
+        <Label Content="Визит" HorizontalContentAlignment="Center" FontSize="24"  Foreground="Black" Grid.RowSpan="2" Grid.Column="2"  Grid.Row="1"/>
         <Label x:Name="label6" Content="№." FontSize="16"  Grid.Row="4"/>
         <Label x:Name="labelId" Content="0"  FontSize="16" Grid.ColumnSpan="4"  Width="149" Grid.Column="2" Grid.Row="4" />
         <Label x:Name="labelDoctor"  FontSize="16" Content="Врач"   Grid.ColumnSpan="2" Grid.Row="5"/>
@@ -61,7 +61,7 @@
         <Label x:Name="label1" Content="Имя" Foreground="Black" FontFamily="Segoe UI Black" FontSize="16"  Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="9"/>
         <TextBox x:Name="textBoxPatientName" IsEnabled="False" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя пациента" Foreground="Black" Grid.ColumnSpan="4" Margin="0,0,16,0" Grid.Column="2" Grid.Row="9"/>
         <Label x:Name="label5" Content="*" Foreground="White" Margin="0,1,5,1" Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="10"/>
-       
+
 
 
         <Button x:Name="buttonLoadPatient" Content="Выбрать"  Height="Auto" ToolTip="Выбрать пациента" Click="buttonLoadPatient_Click" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="12"/>

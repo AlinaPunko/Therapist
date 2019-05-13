@@ -4,10 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Therapist.View"
+        xmlns:local1="clr-namespace:Therapist"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Диагнозы" MouseDown="VisitsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
-
+    <Window.CommandBindings>
+        <!--<CommandBinding Command="local:NewCustomCommand.CloseCommand" Executed="CommandBinding2_Executed"/>-->
+        <CommandBinding Command="local1:NewCustomCommand.EnterCommand" Executed="CommandBinding1_Executed"/>
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30*"/>
@@ -51,10 +55,11 @@
         <TextBox x:Name="textBoxReason" BorderBrush="Blue" HorizontalAlignment="Left" Height="29" TextChanged="textBoxReason_TextChanged" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Название(диагноза)" Foreground="Black" VerticalAlignment="Top" Width="143" Grid.ColumnSpan="3" Grid.Row="4"  Grid.Column="2" Margin="1,2,0,0"/>
         <DatePicker x:Name="dateTimePickerFrom" BorderBrush="Blue" materialDesign:HintAssist.Hint="От даты"  Height="26"
                     Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,20,0,0"   />
+        <materialDesign:PackIcon Kind="Calendar" Foreground="Blue" Height="30" Width="22" Grid.Row="5" Grid.Column="1" RenderTransformOrigin="0.682,1.033" Margin="0,16,0,0" />
         <DatePicker x:Name="dateTimePickerTo" BorderBrush="Blue" materialDesign:HintAssist.Hint="До даты"  Height="34" 
                     VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" />
-
-        <Button x:Name="buttonSearch" ToolTip="Искать визит"  Content="Поиск" Click="buttonSearch_Click" Grid.Row="9" Grid.Column="2"   Height="Auto"/>
+        <materialDesign:PackIcon Kind="Calendar" Foreground="Blue" Height="30" Width="22" Grid.Row="7" Grid.Column="1" />
+        <Button x:Name="buttonSearch" ToolTip="Искать визит"  Content="Поиск" Click="buttonSearch_Click" Grid.Row="9"  Grid.ColumnSpan="3" Grid.Column="1" />
 
         <DataGrid x:Name="dataGridViewResult"  ItemsSource="{Binding }" IsReadOnly="True"  HorizontalAlignment="Left" Height="325" VerticalAlignment="Top" Width="706"
                   AlternatingRowBackground="#FFEEEEEE"  RowBackground ="White" 

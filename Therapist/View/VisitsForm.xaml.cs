@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Therapist.Data;
+using Therapist;
 using Therapist.Logic;
 
 namespace Therapist.View
@@ -166,7 +167,7 @@ namespace Therapist.View
         }
         private void CommandBinding1_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            this.Close();
+            this.Presenter.LoadVisitsByCriterias();
         }
         private void textBoxReason_TextChanged(object sender, TextChangedEventArgs e)
         {

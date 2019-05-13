@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="LoginForm" Height="450" MouseDown="EditUserForm_MouseDown" Width="350" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" >
-    
+
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
         <Rectangle Grid.ColumnSpan="8"  Grid.RowSpan="12" />
 
         <Image Grid.Column="4" Name="img1" Source="/Picture/doctor (2).png"  Grid.Row="2" />
-        <Label Content="Данные Пользователя" FontSize="22" Grid.ColumnSpan="6" Height="41" Width="255" Grid.Column="1" Grid.Row="1" Margin="25,0,0,0" />
+        <Label Content="Данные Пользователя" HorizontalContentAlignment="Center" FontSize="22" Grid.ColumnSpan="6"  Grid.Column="1" Grid.Row="1" />
 
         <Label x:Name="label6" Foreground="Black" Content="№." Grid.Column="2" Grid.Row="4"/>
         <Label x:Name="labelId" Foreground="Black" Content="0" Grid.Column="3"  Grid.Row="4"/>
