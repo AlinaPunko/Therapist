@@ -95,11 +95,16 @@ namespace Therapist.View
 
         public string Message
         {
+            get
+            {
+                return labelMessage.ToString();//ContentStringFormat на text
+            }
             set
             {
-                MessageBox.Show(value);
+                labelMessage.Content = value;//ContentStringFormat на text
             }
         }
+
 
         #endregion
 

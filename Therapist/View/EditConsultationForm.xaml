@@ -7,7 +7,7 @@
         xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="LoginForm" Height="450" MouseDown="EditConsultationForm_MouseDown" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" >
+        Title="Консультация" Height="450" MouseDown="EditConsultationForm_MouseDown" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen" >
 
     <Grid>
         <Grid.RowDefinitions>

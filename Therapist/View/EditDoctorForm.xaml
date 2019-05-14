@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local1="clr-namespace:Therapist.View"
         mc:Ignorable="d"
-        Title="LoginForm" Height="450" MouseDown="EditDoctorForm_MouseDown" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+        Title="Доктор" Height="450" MouseDown="EditDoctorForm_MouseDown" Width="350" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
 
     <Grid>
         <Grid.ColumnDefinitions>

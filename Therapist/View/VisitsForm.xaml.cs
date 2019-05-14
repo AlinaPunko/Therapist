@@ -131,6 +131,7 @@ namespace Therapist.View
 
             int selectedVisitId = selectedVisit.VisitID;
             var editVisitForm = new EditVisitForm(selectedVisitId);
+            //editVisitForm.buttonLoadPatient.IsEnabled = false;
             editVisitForm.ShowDialog();
             this.Presenter.LoadVisitsByCriterias();
         }

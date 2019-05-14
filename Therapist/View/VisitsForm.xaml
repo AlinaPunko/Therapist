@@ -7,7 +7,7 @@
         xmlns:local1="clr-namespace:Therapist"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Диагнозы" MouseDown="VisitsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
+        Title="Список визитов" MouseDown="VisitsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
     <Window.CommandBindings>
         <!--<CommandBinding Command="local:NewCustomCommand.CloseCommand" Executed="CommandBinding2_Executed"/>-->
         <CommandBinding Command="local1:NewCustomCommand.EnterCommand" Executed="CommandBinding1_Executed"/>
@@ -107,7 +107,7 @@
 
         </WrapPanel>
         <StatusBar x:Name="statusStripBottom" Background="White" HorizontalAlignment="Left" Height="20" Margin="2,15,0,0" VerticalAlignment="Top" Width="624" Grid.Column="5" Grid.Row="10" Grid.ColumnSpan="4"/>
-        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Left" Height="38" Margin="10,7,0,0" VerticalAlignment="Top" Width="173" Grid.Row="10" Grid.ColumnSpan="4"/>
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Left" Height="38" Margin="0,7,0,0" VerticalAlignment="Top" Width="170" Grid.Row="10" Grid.ColumnSpan="4" Grid.Column="1"/>
 
 
     </Grid>

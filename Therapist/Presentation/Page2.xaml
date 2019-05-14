@@ -5,29 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Therapist.Presentation"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="680"
+      d:DesignHeight="350" d:DesignWidth="680"
       Title="Page2">
-    <DockPanel>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="17*"/>
-                <RowDefinition Height="102*"/>
-                <RowDefinition Height="31*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="75*"/>
-                <ColumnDefinition Width="269*"/>
-                <ColumnDefinition Width="223*"/>
-                <ColumnDefinition Width="102*"/>
-                <ColumnDefinition Width="11*"/>
-            </Grid.ColumnDefinitions>
-            <Image Source="../Picture/Pic1.jpg" Grid.ColumnSpan="5"  Grid.RowSpan="3" />
-            <Rectangle  RadiusY="15" RadiusX="15" Grid.Column="1" Grid.Row="1" Fill="Transparent"/>
-            <TextBlock  FontSize="25" Grid.Row="1" FontFamily="Arial"
-                   Style="{DynamicResource MaterialDesignHeadlineTextBlock}" TextWrapping="Wrap" Grid.Column="2" Margin="2,13,59,80" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                Основной целью создания работы данного программного средства является автоматизация работы врача и уменьшение количества бумажных документов.
-            </TextBlock>
 
-        </Grid>
-    </DockPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="../Picture/Pic1.jpg" Grid.ColumnSpan="3" Grid.RowSpan="3" />
+        <TextBlock  FontSize="23" FontFamily="Arial"
+                   Style="{DynamicResource MaterialDesignHeadlineTextBlock}" TextWrapping="Wrap" Margin="0,0,75,0" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1">
+                Основной целью создания работы данного программного средства является автоматизация работы врача и уменьшение количества бумажных документов.
+        </TextBlock>
+
+    </Grid>
 </Page>

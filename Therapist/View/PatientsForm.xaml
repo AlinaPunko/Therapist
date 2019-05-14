@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Therapist.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="PatientsForm" MouseDown="PatientsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
+        Title="Список пациентов" MouseDown="PatientsForm_MouseDown" Height="450" Width="916" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Grid.RowDefinitions>

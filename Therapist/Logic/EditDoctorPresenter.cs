@@ -47,8 +47,11 @@ namespace Therapist.Logic
         {
             string message = string.Empty;
             bool isValid = IsDataValid(out message);
-            View.Message = message;
-
+            //View.Message = message;
+            if (!isValid)
+            {
+                View.Message = message;
+            }
             return isValid;
         }
 

@@ -56,7 +56,7 @@ namespace Therapist.View
             this.Presenter.Save();
             else
                 this.Presenter.Save1();
-            this.Close();
+            //this.Close();
         }
         protected void LoadDoctorById(int doctorId)
         {

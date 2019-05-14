@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Therapist"     
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" WindowStyle="None" AllowsTransparency="True" Background="Transparent"  Height="450" MouseDown="MainForm_MouseDown" Width="915" ResizeMode="NoResize" Title="Главное окно"   WindowStartupLocation="CenterScreen" >
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  WindowStyle="None" AllowsTransparency="True" Background="Transparent"  Height="450" MouseDown="MainForm_MouseDown" Width="915" ResizeMode="NoResize" Title="Главное окно"   WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">

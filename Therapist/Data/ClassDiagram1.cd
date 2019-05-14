@@ -1,139 +1,371 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
-  <Class Name="Therapist.View.ConsultationsForm" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="1" Width="1.5" />
+  <Class Name="Therapist.App" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACAIBAAEAIAAgAAgAAEQACAAAAIAAAIAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.LoginForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAABEAIAAEAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoginForm.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.NewCustomCommand" Collapsed="true">
+    <Position X="17.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoginForm.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAABAAAAAAAAAAEAAIIAABAAAAAACAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.View.ConsultationsForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAIBAAEAIAEgAAgAAEQACAAAAIAAAIAAAAAA=</HashCode>
       <FileName>View\ConsultationsForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.DoctorsForm" BaseTypeListCollapsed="true">
-    <Position X="3.5" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.DoctorsForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAJAAMAAAAgAACEAEBACAAAAIgAAIAAAAQA=</HashCode>
       <FileName>View\DoctorsForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.EditConsultationForm" BaseTypeListCollapsed="true">
-    <Position X="5" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.EditConsultationForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAACAQgAAAIAAABQAQAAEAACQAAAIAAAIAgBwAA=</HashCode>
       <FileName>View\EditConsultationForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.EditDoctorForm" BaseTypeListCollapsed="true">
-    <Position X="2" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.EditDoctorForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAABAAACAEAACQAACIAAAoAADAAA=</HashCode>
       <FileName>View\EditDoctorForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.EditPatientForm" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.EditPatientForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAACAQAAQAQAAYBAAiQQESAAEBACIgAAIAABAKA=</HashCode>
       <FileName>View\EditPatientForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.EditUserForm" BaseTypeListCollapsed="true">
-    <Position X="11" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.EditUserForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAABAAAgAEAAAAgACIQAAIAABIAA=</HashCode>
       <FileName>View\EditUserForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.EditVisitForm" BaseTypeListCollapsed="true">
-    <Position X="6.5" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.EditVisitForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACgAAACQQgAAAIAAABQAAAAEAACQAAAIAAAIEgBgAA=</HashCode>
       <FileName>View\EditVisitForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.PatientsForm" BaseTypeListCollapsed="true">
-    <Position X="12.5" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.PatientsForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CAAAAAAAAAFAAEAAAEgAACEAGAASIAAAJAAAIAAAAAA=</HashCode>
       <FileName>View\PatientsForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Therapist.View.VisitsForm" BaseTypeListCollapsed="true">
-    <Position X="8" Y="1" Width="1.5" />
+  <Class Name="Therapist.View.VisitsForm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAIAAABAAEYAAEgAAAAAEAACCAAAIAAAIAAAIIA=</HashCode>
       <FileName>View\VisitsForm.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
+  <Class Name="Therapist.Data.ConsultationDataAccess" Collapsed="true">
+    <Position X="19.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAACAAAiAUAAAAAACAEQAAA=</HashCode>
+      <FileName>Data\ConsultationDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.DoctorDataAccess" Collapsed="true">
+    <Position X="26.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAlAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Data\DoctorDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.PatientsDataAccess" Collapsed="true">
+    <Position X="16" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAACAAAAEABAAAAAACEAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Data\PatientsDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.TherapistContainer1" Collapsed="true">
+    <Position X="2.75" Y="0.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACAAIAIAAKQAAAIAAAABBQAAAIgABiAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.Consultation" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAgAAiCAQABAIIiEQAQUYECAAQARBSgEAIAAAgACAE=</HashCode>
+      <FileName>Models\Consultation.extension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.Doctor" Collapsed="true">
+    <Position X="2" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgADAAgAAAAAAKSQEAAAJEYAEQAASAgCAAIAIABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.Patient" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAQSEQAAIFYAEQAAQBAiCAAIIABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.User" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAoAAQgAAMAAAAIUAAgQAAgABASCIQIAAEQAEAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.Visit" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoCgAAkCBwABAMYAAQAQAAACQAQARDagGAIAIAAQKAA=</HashCode>
+      <FileName>Models\Visit.extension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.UsersDataAccess" Collapsed="true">
+    <Position X="16" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAACEAAQCAAEAAQAAAACAAAAAQAEAAAA=</HashCode>
+      <FileName>Data\UsersDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Data.VisitsDataAccess" Collapsed="true">
+    <Position X="19.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAEAAEAAAAAAAAgBAAQAAAAAEAAQAAAA=</HashCode>
+      <FileName>Data\VisitsDataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.ConsultationsPresenter" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAQAFAAAAEAIAIAAAAAA=</HashCode>
+      <FileName>Logic\ConsultationsPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.DoctorsPresenter" Collapsed="true">
+    <Position X="17.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAABAwAAEgAAIAAAAAA=</HashCode>
+      <FileName>Logic\DoctorsPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.EditConsultationPresenter" Collapsed="true">
+    <Position X="21.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgJAAAAAAAAAAAAgAIgAAAAABICAAAAAgAAAAAAA=</HashCode>
+      <FileName>Logic\EditConsultationPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.EditDoctorPresenter" Collapsed="true">
+    <Position X="24.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAgAAgAEAAABICQAAAAgAAAAABA=</HashCode>
+      <FileName>Logic\EditDoctorPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.EditPatientPresenter" Collapsed="true">
+    <Position X="16" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAgABgAAAAABICAAAAAgAIAACAA=</HashCode>
+      <FileName>Logic\EditPatientPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.EditUserPresenter" Collapsed="true">
+    <Position X="19.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgIAAAAAAAAAAAAgAAgAAAAABICAAAAAgAAAAAIA=</HashCode>
+      <FileName>Logic\EditUserPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.EditVisitPresenter" Collapsed="true">
+    <Position X="23" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAQAIAgAAgAAAAABICAAAAAgAAAAAAA=</HashCode>
+      <FileName>Logic\EditVisitPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.Membership" Collapsed="true">
+    <Position X="16" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIQIAAIAAAAAAAEAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Logic\Membership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.PatientsPresenter" Collapsed="true">
+    <Position X="19.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAACBAAAAFAAAIAABAAA=</HashCode>
+      <FileName>Logic\PatientsPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Logic.VisitsPresenter" Collapsed="true">
+    <Position X="23" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAEAAAQAAAAACAAAABABAAAAEAAAIAAAAAA=</HashCode>
+      <FileName>Logic\VisitsPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Presentation.Page2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\Page2.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.Presentation.Page4" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\Page4.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.Presentation.Page5" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\Page5.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.Presentation.Page6" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\Page6.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.Presentation.Window1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAEEEAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Presentation\Window1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Therapist.Properties.Resources" Collapsed="true">
+    <Position X="21.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Therapist.Properties.Settings" Collapsed="true">
+    <Position X="23" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Therapist.View.IConsultationsView" Collapsed="true">
-    <Position X="16.5" Y="3.5" Width="1.5" />
+    <Position X="16" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAIAAAAAAAAAAAAAAAQAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>View\IConsultationsView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IDoctorsView" Collapsed="true">
-    <Position X="18.25" Y="3.5" Width="1.5" />
+    <Position X="17.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAIAAAAAA=</HashCode>
       <FileName>View\IDoctorsView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IEditConsultationView" Collapsed="true">
-    <Position X="20" Y="3.5" Width="1.5" />
+    <Position X="19.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAACAQAAAAIAAAAAAQAAAAACQAAAAAAAIAgAQAA=</HashCode>
       <FileName>View\IEditConsultationView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IEditDoctorView" Collapsed="true">
-    <Position X="16.5" Y="4.25" Width="1.5" />
+    <Position X="21.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAACQAACAAAAIAAAAAA=</HashCode>
       <FileName>View\IEditDoctorView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IEditPatientView" Collapsed="true">
-    <Position X="18.25" Y="4.25" Width="1.5" />
+    <Position X="23" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAQAAAAQAAAAAAAQAAQAAAAACAAAAIAAAAAA=</HashCode>
       <FileName>View\IEditPatientView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IEditUserView" Collapsed="true">
-    <Position X="20" Y="4.25" Width="1.5" />
+    <Position X="24.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAACAQAAIAAAIAA=</HashCode>
       <FileName>View\IEditUserView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IEditVisitView" Collapsed="true">
-    <Position X="16.5" Y="5" Width="1.5" />
+    <Position X="26.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACgAAACQQAAAAIAAAAAAAAAAAACQAAAAAAAIAAAAAA=</HashCode>
       <FileName>View\IEditVisitView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IPatientsView" Collapsed="true">
-    <Position X="18.25" Y="5" Width="1.5" />
+    <Position X="16" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAIAAAAAA=</HashCode>
       <FileName>View\IPatientsView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Therapist.View.IVisitsView" Collapsed="true">
-    <Position X="20" Y="5" Width="1.5" />
+    <Position X="17.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAYAAAAAAAAAAAAACAAAAAAAIAAAAAA=</HashCode>
       <FileName>View\IVisitsView.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Enum Name="Therapist.Models.UserRoles" Collapsed="true">
+    <Position X="16" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserRolesEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
