@@ -15,7 +15,7 @@ namespace Therapist.Logic
         {
             this.View = view;
             this.View.ScheduleDateFromCriteria = DateTime.Now.AddDays(-1);
-            this.View.ScheduleDateToCriteria = DateTime.Now.AddDays(7);
+            this.View.ScheduleDateToCriteria = DateTime.Now.AddDays(21);
         }
 
         private IEnumerable<Consultation> _consultations;

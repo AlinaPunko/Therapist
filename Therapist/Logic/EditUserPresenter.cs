@@ -42,7 +42,7 @@ namespace Therapist.Logic
         {
             string message = string.Empty;
             bool isValid = IsDataValid(out message);
-            // View.Message = message;
+            View.Message = message;
             if (!isValid)
             {
                 View.Message = message;
@@ -91,7 +91,7 @@ namespace Therapist.Logic
                 SaveModel(User);
                 FillView();
             }
-            else MessageBox.Show("Проблема");
+            else { MessageBox.Show("Проблема"); };
         }
 
         private void SaveModel(User model)

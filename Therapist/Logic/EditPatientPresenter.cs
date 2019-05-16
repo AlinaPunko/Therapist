@@ -102,7 +102,10 @@ namespace Therapist.Logic
                 SaveModel(Patient);
                 FillView();
             }
-            else MessageBox.Show("Проблема");
+            else
+            { 
+            MessageBox.Show("Проблема");
+            }
         }
 
         private void SaveModel(Patient model)

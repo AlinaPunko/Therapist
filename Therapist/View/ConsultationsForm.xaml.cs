@@ -58,10 +58,13 @@ namespace Therapist.View
 
         public string Message
         {
-            set { MessageBox.Show(value); }
-        }
-        
+            set
+            {
+                MessageBox.Show(value);
+            }
             
+
+        }
 
 
 

@@ -178,6 +178,7 @@ namespace Therapist.View
         {
             set
             {
+                
                 MessageBox.Show(value);
             }
         }
