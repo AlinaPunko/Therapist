@@ -29,7 +29,7 @@ namespace Therapist.Logic
         protected void FillUser()
         {
             User.UserName = View.UserName;
-            User.Password = View.Password;
+            User.Password = Membership.GetHashString(View.Password);
         }
 
         protected void FillView()
@@ -126,7 +126,7 @@ namespace Therapist.Logic
 
         public void CreateNew()
         {
-            var newUser = new User() { RoleID = 1, UserName = " " };
+            var newUser = new User() { RoleID = 1, UserName = "" };
             this.User = newUser;
             this.FillView();
         }

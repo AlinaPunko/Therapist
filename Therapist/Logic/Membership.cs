@@ -40,10 +40,10 @@ namespace Therapist.Logic
         /// <returns></returns>
         public static bool IsValidLoginDetails(string username, string password)
         {
-            bool isValid = UsersDataAccess.IsValidLoginData(username, password);
+            bool isValid = UsersDataAccess.IsValidLoginData(username, GetHashString( password));
             return isValid;
         }
-        string GetHashString(string s)
+        public static string GetHashString(string s)
         {
             //переводим строку в байт-массим  
             byte[] bytes = Encoding.Unicode.GetBytes(s);

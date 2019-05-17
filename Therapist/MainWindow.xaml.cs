@@ -39,7 +39,7 @@ namespace Therapist
                 ItemAddAdmin.Visibility = Visibility.Collapsed;
                 ItemAddPatient.Visibility = Visibility.Collapsed;
             }
-        
+
         }
 
         private void MainForm_MouseDown(object sender, MouseButtonEventArgs e)
