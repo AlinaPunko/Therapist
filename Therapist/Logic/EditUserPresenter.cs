@@ -91,7 +91,11 @@ namespace Therapist.Logic
                 SaveModel(User);
                 FillView();
             }
-            else { MessageBox.Show("Проблема"); };
+            else
+            {
+                Message message = new Message("Проблема");
+                message.Show();
+            };
         }
 
         private void SaveModel(User model)

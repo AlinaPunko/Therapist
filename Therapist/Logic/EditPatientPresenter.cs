@@ -98,13 +98,15 @@ namespace Therapist.Logic
             bool isValid = IsValid();
             if (isValid)
             {
-                MessageBox.Show("Успешно");
+                Message message = new Message("Успешно");
+                message.Show();
                 SaveModel(Patient);
                 FillView();
             }
             else
-            { 
-            MessageBox.Show("Проблема");
+            {
+                Message message = new Message("Проблема");
+                message.Show();
             }
         }
 
@@ -125,7 +127,8 @@ namespace Therapist.Logic
             catch (Exception e)
             {
                 var message = String.Format("Ошибка хранилища");
-                MessageBox.Show(e.Message);
+                Message message1  = new Message(message);
+                message1.Show();
                 View.Message = message;
             }
 

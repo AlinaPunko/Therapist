@@ -99,8 +99,9 @@ namespace Therapist.View
         {
             set
             {
-               
-                MessageBox.Show(value);
+
+                Message message = new Message(value);
+                message.Show();
             }
         }
 

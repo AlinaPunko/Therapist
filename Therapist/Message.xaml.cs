@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Therapist
@@ -18,25 +17,25 @@ namespace Therapist
     /// <summary>
     /// Логика взаимодействия для Message.xaml
     /// </summary>
-    public partial class Message : UserControl
+    public partial class Message : Window
     {
         public Message()
         {
             InitializeComponent();
         }
-        public Message(string content) : this()
+        public Message(string content): this()
         {
             Content.Text = content;
         }
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-            Window window = this;
-            window.Close();
+            this.Close();
         }
 
-        public static implicit operator Window(Message v)
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }

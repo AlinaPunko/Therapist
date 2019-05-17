@@ -91,16 +91,17 @@ namespace Therapist.Logic
             bool isValid = IsValid();
             if (isValid)
             {
-                
-                MessageBox.Show("Успешно");
+                Message message = new Message("Успешно");
+                message.Show();
                 SaveModel(Doctor);
                 FillView();
             }
             else
             {
-                
-                MessageBox.Show("Проблема");
-               // FillView();
+
+                Message message = new Message("Проблема");
+                message.Show();
+                // FillView();
             }
         }
         public void Save1()
@@ -110,7 +111,8 @@ namespace Therapist.Logic
             bool isValid = IsValid();
             if (isValid)
             {
-                MessageBox.Show("Успешно");
+                Message message = new Message("Успешно");
+                message.Show();
                 SaveModel(Doctor);
                 FillView();
                 EditUserForm editUserForm = new EditUserForm(Doctor.DoctorID, true);
@@ -119,7 +121,8 @@ namespace Therapist.Logic
 
             else
             {
-                MessageBox.Show("Проблема");
+                Message message = new Message("Проблема");
+                message.Show();
             }
         }
 

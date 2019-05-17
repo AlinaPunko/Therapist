@@ -105,7 +105,7 @@ namespace Therapist.Logic
 
             if (!Consultation.ScheduleTime.HasValue)
             {
-                MessageBox.Show("Время не выбрано!!!!!!");
+                //MessageBox.Show("Время не выбрано!!!!!!");
                 message += String.Format("Поле '{0}' пусто!\n", "Время");
                 isValid = true;
             }
