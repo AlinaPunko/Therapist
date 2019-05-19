@@ -123,6 +123,7 @@ namespace Therapist.View
         {
             var editConsultationForm = new EditConsultationForm(0);
             editConsultationForm.ShowDialog();
+            this.Presenter.LoadConsultationsByCriterias();
         }
 
         private void buttonEdit_Click(object sender, RoutedEventArgs e)

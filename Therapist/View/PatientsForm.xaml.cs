@@ -64,6 +64,7 @@ namespace Therapist.View
             int patientId = patient.PatientID;
             EditPatientForm patientForm = new EditPatientForm(patientId);
             patientForm.ShowDialog();
+            this.Presenter.LoadPatientsByCriterias();
         }
         private Patient GetSelectedPatient()
         {
