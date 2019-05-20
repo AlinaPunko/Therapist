@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Therapist.Data;
 using Therapist.Logic;
 using Therapist.Models;
@@ -158,6 +159,20 @@ namespace Therapist
         {
             DoctorsForm doctorsForm = new DoctorsForm();
             doctorsForm.ShowDialog();
+        }
+
+        private void MainForm_Loaded(object sender, RoutedEventArgs e)
+        {
+            var timer = new DispatcherTimer();
+            timer.Start();
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.IsEnabled = true;
+            timer.Tick += (o, t) =>
+            {
+                GetTime.Content = DateTime.Now.ToString("HH:mm:ss");
+                GetDate.Content = DateTime.Now.ToString("ddd MMM yyy");
+            };
+            
         }
     }
 }

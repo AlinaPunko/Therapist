@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Therapist"     
         mc:Ignorable="d"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"  WindowStyle="None" AllowsTransparency="True" Background="Transparent"  Height="450" MouseDown="MainForm_MouseDown" Width="915" ResizeMode="NoResize" Title="Главное окно"   WindowStartupLocation="CenterScreen" >
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" Loaded="MainForm_Loaded"  WindowStyle="None" AllowsTransparency="True" Background="Transparent"  Height="450" MouseDown="MainForm_MouseDown" Width="915" ResizeMode="NoResize" Title="Главное окно"   WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -119,7 +119,7 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <TextBlock Name="Time" HorizontalAlignment="Left" Height="40" Margin="360,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="30" TextAlignment="Center"/>
-        <TextBlock Name="Date" HorizontalAlignment="Left" Height="50" Margin="325,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" TextAlignment="Center" FontSize="26"/>
+        <Label Name="GetTime" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="45" Margin="355,235,0,0"  VerticalAlignment="Top" Width="125" FontSize="30" />
+        <Label Name="GetDate" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="50" Margin="325,300,0,0"  VerticalAlignment="Top" Width="180"  FontSize="26"/>
     </Grid>
 </Window> 

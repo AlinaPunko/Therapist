@@ -71,12 +71,12 @@
         <StatusBar x:Name="statusStripBottom" HorizontalAlignment="Left" Height="28" Background="White" Margin="5,11,0,0" 
                    VerticalAlignment="Top" Width="572" Grid.Column="5" Grid.ColumnSpan="4" Grid.Row="9"/>
         <WrapPanel x:Name="panelButtons" HorizontalAlignment="Left" Height="61"  VerticalAlignment="Top"  Grid.ColumnSpan="4" Grid.Column="7" Grid.Row="7" Grid.RowSpan="2" Width="364">
-            <Button x:Name="buttonEdit"  Width="58"  Click="buttonEdit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
-                    ToolTip="Редактировать выбранного пациента" Height="58" >
+            <Button x:Name="buttonEdit"  Width="50"  Click="buttonEdit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    ToolTip="Редактировать выбранного пациента" Height="50" >
                 <materialDesign:PackIcon Kind="TableEdit" Height="35" Width="35" />
             </Button>
-            <Button x:Name="buttonDelete"  Width="58" Margin="0 0 90 0" Click="buttonDelete_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
-                    ToolTip="Удалить выбранного пациента" Height="58" >
+            <Button x:Name="buttonDelete"  Width="50" Margin="0 0 90 0" Click="buttonDelete_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    ToolTip="Удалить выбранного пациента" Height="50" >
                 <materialDesign:PackIcon Kind="DeleteEmpty" Height="35" Width="35" />
             </Button>
             <Button x:Name="buttonAdd"  Width="50" Click="buttonAdd_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
