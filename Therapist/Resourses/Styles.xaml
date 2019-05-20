@@ -25,4 +25,11 @@
         <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="Foreground" Value="Black" />
     </Style>
-    </ResourceDictionary>
+                <ControlTemplate TargetType="Button" x:Key="hexagon">
+                    <Border Background="Transparent"                          
+                            BorderThickness="1">
+            <Path Stretch="Uniform" Stroke="Transparent" Fill="Transparent" Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 Z" />
+        </Border>
+                </ControlTemplate>
+            
+</ResourceDictionary>

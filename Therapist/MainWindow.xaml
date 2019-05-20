@@ -31,6 +31,10 @@
     <Grid Background="#FFDEDEDE">
         <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="380" Width="870"/>
         <Image Source="Picture/Pic4.jpg"/>
+        <Button Name="AddPatienthex" Template="{StaticResource hexagon}" Margin="675,180,155,190" Height="Auto" Background="Transparent" Click="AddPatient" />
+        <Button Name="Doctorshex" Template="{StaticResource hexagon}" Margin="745,305,85,65" Height="Auto" Background="Transparent" Click="Doctors" />
+        <Button Name="AddConsultationhex" Template="{StaticResource hexagon}" Margin="600,60,230,310" Height="Auto" Background="Transparent" Click="AddConsultation" />
+        <Button Name="AddVisithex"  Template="{StaticResource hexagon}" Margin="780,245,50,125" Height="Auto" Background="Transparent" Click="AddVisit" />
         <Grid Height="40" VerticalAlignment="Top" Background="#FF5C99D6">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>

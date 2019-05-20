@@ -38,6 +38,7 @@ namespace Therapist
                 ItemAddDoctor.Visibility = Visibility.Collapsed;
                 ItemAddAdmin.Visibility = Visibility.Collapsed;
                 ItemAddPatient.Visibility = Visibility.Collapsed;
+                Doctorshex.Visibility = Visibility.Collapsed;
             }
 
         }
@@ -136,6 +137,27 @@ namespace Therapist
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void AddPatient(object sender, RoutedEventArgs e)
+        {
+            EditPatientForm editPatientForm = new EditPatientForm(0);
+            editPatientForm.ShowDialog();
+        }
+        private void AddVisit(object sender, RoutedEventArgs e)
+        {
+            EditVisitForm editVisitForm = new EditVisitForm(0);
+            editVisitForm.ShowDialog();
+        }
+        private void AddConsultation(object sender, RoutedEventArgs e)
+        {
+            EditConsultationForm editConsultationForm = new EditConsultationForm(0);
+            editConsultationForm.ShowDialog();
+        }
+        private void Doctors(object sender, RoutedEventArgs e)
+        {
+            DoctorsForm doctorsForm = new DoctorsForm();
+            doctorsForm.ShowDialog();
         }
     }
 }
