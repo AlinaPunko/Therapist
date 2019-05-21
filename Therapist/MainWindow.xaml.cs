@@ -29,11 +29,9 @@ namespace Therapist
         public MainWindow()
         {
             InitializeComponent();
-            //Date.Text = DateTime.Now.Date.ToString("dd.MM.yyy");
-            //Time.Text = DateTime.Now.TimeOfDay.ToString();
             UserName.Text = Membership.CurrentUser.UserName.ToString();
             //Time.Content = DateTime.Now.TimeOfDay;
-            if (Membership.CurrentUser.UserID == 2)
+            if (Membership.CurrentUser.RoleID == 2)
             {
                 ItemDoctors.Visibility = Visibility.Collapsed;
                 ItemAddDoctor.Visibility = Visibility.Collapsed;
@@ -70,49 +68,42 @@ namespace Therapist
                 case "ItemDoctors":
                     {
                         DoctorsForm doctorsForm = new DoctorsForm();
-                        //doctorsForm.Topmost = true;
                         doctorsForm.ShowDialog();
                         break;
                     }
                 case "ItemPatients":
                     {
                         PatientsForm patientsForm = new PatientsForm();
-                       // patientsForm.Topmost = true;
                         patientsForm.ShowDialog();
                         break;
                     }
                 case "ItemVisits":
                     {
                         VisitsForm visitsForm = new VisitsForm();
-                       // visitsForm.Topmost = true;
                         visitsForm.ShowDialog();
                         break;
                     }
                 case "ItemConsultations":
                     {
                         ConsultationsForm consultationsForm = new ConsultationsForm();
-                        //consultationsForm.Topmost = true;
                         consultationsForm.ShowDialog();
                         break;
                     }
                 case "ItemAddDoctor":
                     {
                         EditDoctorForm newForm = new EditDoctorForm(true);
-                       // newForm.Topmost = true;
                         newForm.ShowDialog();
                         break;
                     }
                 case "ItemAddAdmin":
                     {
                         EditUserForm newForm = new EditUserForm(0);
-                        // newForm.Topmost = true;
                         newForm.ShowDialog();
                         break;
                     }
                 case "ItemAddPatient":
                     {
                         EditPatientForm newForm = new EditPatientForm(0);
-                        // newForm.Topmost = true;
                         newForm.ShowDialog();
                         break;
                     }

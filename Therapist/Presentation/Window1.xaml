@@ -17,15 +17,15 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Background="Aquamarine" Grid.ColumnSpan="2">
-            <Button Width="125" Margin="15,0,0,0" BorderBrush="White"  Content="Слайд 1" Click="Button_Click"/>
-            <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 2" Click="Button_Click_1"/>
-            <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 3" Click="Button_Click_2"/>
-            <Button Width="125" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 4" Click="Button_Click_3"/>
+            <Button Width="120" Margin="15,0,0,0" BorderBrush="White"  Content="Слайд 1" Click="Button_Click"/>
+            <Button Width="120" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 2" Click="Button_Click_1"/>
+            <Button Width="120" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 3" Click="Button_Click_2"/>
+            <Button Width="130" Margin="15,0,0,0" BorderBrush="White" Content="Слайд 4" Click="Button_Click_3" MouseRightButtonDown="Button_MouseRightButtonDown"/>
             <Button x:Name="ButtonClose"  Background="{x:Null}" BorderBrush="{x:Null}" 
-                Click="buttonCancel_Click" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center"  >
+                Click="buttonCancel_Click" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center"    >
                 <materialDesign:PackIcon Kind="Power"  Foreground="Black"  HorizontalAlignment="Center" />
             </Button>
         </StackPanel>
-        <Frame Name="Main" Background="Aquamarine" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Frame Name="Main" Background="Aquamarine" Grid.ColumnSpan="2" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

@@ -319,22 +319,11 @@ namespace Therapist.View
             {
                 Text += "Причина " + c.Reason + " дата " + c.ScheduleDate.ToString() + " время " + c.ScheduleTime.ToString() + " доктор " + c.DoctorName + "\r\n";
             }
-            //PrintDialog pr = new PrintDialog();
-            //if (pr.ShowDialog() == true)
-            //    pr.P(, Text);
-            PrintDocument p = new PrintDocument();
-            p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
+            using (StreamWriter f = new StreamWriter("text.txt"))
             {
-                e1.Graphics.DrawString(Text, new Font("Times New Roman", 12), new SolidBrush(System.Drawing.Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-            };
-            try
-            {
-                p.Print();
+                f.Write(Text);
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Exception Occured While Printing", ex);
-            }
+            
         }
     }
 }

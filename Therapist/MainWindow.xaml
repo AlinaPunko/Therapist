@@ -119,7 +119,7 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        <Label Name="GetTime" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="45" Margin="355,235,0,0"  VerticalAlignment="Top" Width="125" FontSize="30" />
-        <Label Name="GetDate" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="50" Margin="325,300,0,0"  VerticalAlignment="Top" Width="180"  FontSize="26"/>
+        <Label Name="GetTime" HorizontalContentAlignment="Center" Foreground="AliceBlue" HorizontalAlignment="Left" Height="45" Margin="355,235,0,0"  VerticalAlignment="Top" Width="125" FontSize="30" />
+        <Label Name="GetDate" HorizontalContentAlignment="Center" Foreground="AliceBlue" HorizontalAlignment="Left" Height="50" Margin="325,300,0,0"  VerticalAlignment="Top" Width="180"  FontSize="26"/>
     </Grid>
 </Window> 

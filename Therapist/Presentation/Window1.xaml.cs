@@ -26,6 +26,7 @@ namespace Therapist.Presentation
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Main.Background = Brushes.Aquamarine;
             Main.Content = new Page2();
         }
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
@@ -36,16 +37,20 @@ namespace Therapist.Presentation
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+            Main.Background = Brushes.Aquamarine;
             Main.Content = new Page4();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Main.Background = Brushes.Aquamarine;
             Main.Content = new Page5();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            Main.Background = Brushes.Aquamarine;
             Main.Content = new Page6();
         }
 
@@ -53,6 +58,19 @@ namespace Therapist.Presentation
         {
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
+        }
+
+        private void Button_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            ImageBrush myBrush = new ImageBrush();
+            Image image = new Image();
+            image.Source = new BitmapImage(
+                new Uri(
+                   "pack://application:,,,/Picture/cat.jpg"));
+            myBrush.ImageSource = image.Source;
+            Grid grid = new Grid();
+            Main.Background = myBrush;
+            Main.Content = null;
         }
     }
 }

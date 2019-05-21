@@ -34,10 +34,6 @@ namespace Therapist
         {
             TryLogin();
         }
-        //private void CommandBinding2_Executed(object sender, ExecutedRoutedEventArgs e)
-        //{
-        //    this.Close();
-        //}
         private void LoginForm_MouseDown ( object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -110,18 +106,12 @@ namespace Therapist
             InputGestureCollection inputs = new InputGestureCollection();
             inputs.Add(new KeyGesture(Key.Enter));
             enterCommand = new RoutedUICommand("PNV1", "PNV1", typeof(NewCustomCommand), inputs);
-            //inputs.Add(new KeyGesture(Key.Escape));
-            //closeCommand = new RoutedUICommand("PNV", "PNV", typeof(NewCustomCommand), inputs);
+           
         }
         public static RoutedUICommand EnterCommand
         {
             get { return enterCommand; }
         }
-        //private static RoutedUICommand closeCommand;
        
-        //public static RoutedUICommand CloseCommand
-        //{
-        //    get { return closeCommand; }
-        //}
     }
 }
