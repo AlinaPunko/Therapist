@@ -40,7 +40,6 @@ namespace Therapist.Data
                 context.Consultations.AddObject(consultation);
             }
             context.SaveChanges();
-            //detaching the object - ablity to share between different contexts
             context.Detach(consultation);
 
         }

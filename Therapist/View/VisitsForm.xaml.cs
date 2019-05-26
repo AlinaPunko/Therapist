@@ -154,7 +154,7 @@ namespace Therapist.View
             {
                 int visitId = selectedVisit.VisitID;
                 VisitsDataAccess.DeleteVisitById(visitId);
-                this.Presenter.LoadAllVisits();
+                this.Presenter.LoadVisitsByCriterias();
             }
             catch (Exception ex)
             {

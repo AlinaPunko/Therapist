@@ -22,6 +22,7 @@ namespace Therapist.Presentation
         public Window1()
         {
             InitializeComponent();
+            Main.Content = new Page2();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

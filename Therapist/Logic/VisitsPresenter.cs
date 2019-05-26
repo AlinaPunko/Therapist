@@ -111,7 +111,7 @@ namespace Therapist.Logic
 
         public void LoadAllVisits()
         {
-            this.LoadVisitByCriterias(null, null, String.Empty, 0);
+            this.LoadVisitByCriterias(null, null, null, 0);
         }
     }
 }

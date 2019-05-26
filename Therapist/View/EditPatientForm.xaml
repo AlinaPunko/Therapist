@@ -55,7 +55,7 @@
         <StackPanel  Grid.ColumnSpan="2" Grid.Column="4" Grid.Row="1" Grid.RowSpan="8">
             <Expander MouseDown="UIElement_OnMouseDown"  Background="White" HorizontalAlignment="Stretch">
                 <Expander.Header>
-                    <TextBlock MouseDown="UIElement_OnMouseDown" Text="КОНСУЛЬТАЦИИ" FontFamily="MADE Evolve Sans EVO"  Foreground="Blue" FontSize="27" FontWeight="Bold"  Grid.Row="1" Grid.RowSpan="2"/>
+                    <TextBlock Text="КОНСУЛЬТАЦИИ" FontFamily="MADE Evolve Sans EVO"  Foreground="Blue" FontSize="27" FontWeight="Bold"  Grid.Row="1" Grid.RowSpan="2"/>
                 </Expander.Header>
                 <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
                     <Grid Background="#FFE5E5E5" Height="270" >
@@ -91,7 +91,7 @@
             </Expander>
             <Expander MouseDown="UIElement_OnMouseDown" HorizontalAlignment="Stretch" Background="White" Height="354">
                 <Expander.Header  >
-                    <TextBlock MouseDown="UIElement_OnMouseDown" Text="ВИЗИТЫ" FontFamily="MADE Evolve Sans EVO" Foreground="Blue"  FontSize="27" FontWeight="Bold"  Grid.Row="1" Grid.RowSpan="2"/>
+                    <TextBlock  Text="ВИЗИТЫ" FontFamily="MADE Evolve Sans EVO" Foreground="Blue"  FontSize="27" FontWeight="Bold"  Grid.Row="1" Grid.RowSpan="2"/>
                 </Expander.Header>
                 <StackPanel Orientation="Vertical" TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
                     <Grid Background="#FFE5E5E5" Height="290">

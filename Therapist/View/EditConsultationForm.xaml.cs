@@ -64,7 +64,7 @@ namespace Therapist.View
             }
             set
             {
-                dateTimePickerScheduleDate.SelectedDate = DateTime.Now;//DisplayDate  SelectedTime= value
+                dateTimePickerScheduleDate.SelectedDate = value;//DisplayDate  SelectedTime= value
             }
         }
 

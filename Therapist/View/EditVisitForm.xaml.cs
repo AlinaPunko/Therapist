@@ -114,7 +114,7 @@ namespace Therapist.View
             get
             {
 
-                return this.dateTimePickerVisitDate.DisplayDate;//DisplayDate
+                return dateTimePickerVisitDate.SelectedDate.Value;//DisplayDate
             }
             set
             {

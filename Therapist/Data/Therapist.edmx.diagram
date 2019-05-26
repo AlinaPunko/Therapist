@@ -12,12 +12,12 @@
         <EntityTypeShape EntityType="Therapist.User" Width="1.5" PointX="4.5" PointY="2.25" />
         <AssociationConnector Association="Therapist.FK_Consultations_Doctors" />
         <AssociationConnector Association="Therapist.FK_Consultations_Patients" ManuallyRouted="true" >
-          <ConnectorPoint PointX="8" PointY="4.5499886067708326" />
-          <ConnectorPoint PointX="8.4049275172963611" PointY="4.5499886067708326" />
-          <ConnectorPoint PointX="8.4049275172963611" PointY="1.8478196686590209" />
-          <ConnectorPoint PointX="1.5063043323333867" PointY="1.8478196686590209" />
-          <ConnectorPoint PointX="1.5063043323333867" PointY="4.5499886067708326" />
-          <ConnectorPoint PointX="2" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="6.5" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="6.2113887435565722" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="6.2113887435565722" PointY="1.3908449681385271" />
+          <ConnectorPoint PointX="3.959907289056618" PointY="1.3908449681385271" />
+          <ConnectorPoint PointX="3.959907289056618" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="3.5" PointY="4.5499886067708326" />
         </AssociationConnector>
         <AssociationConnector Association="Therapist.FK_Visits_Doctors" />
         <AssociationConnector Association="Therapist.FK_Visits_Patients" ManuallyRouted="false" >

@@ -171,10 +171,6 @@ namespace Therapist.View
             this.Close();
         }
 
-        private void dataGridViewResult_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
         private void CommandBinding1_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();

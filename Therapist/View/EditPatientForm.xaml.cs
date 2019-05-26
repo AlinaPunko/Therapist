@@ -319,11 +319,11 @@ namespace Therapist.View
             {
                 Text += "Причина " + c.Reason + " дата " + c.ScheduleDate.ToString() + " время " + c.ScheduleTime.ToString() + " доктор " + c.DoctorName + "\r\n";
             }
-            using (StreamWriter f = new StreamWriter("text.txt"))
-            {
-                f.Write(Text);
-            }
-            
+            PrintDocument D = new PrintDocument();
+            D.DocumentName = textBoxName.Text.ToString();
+            D.Print();
+
+
         }
     }
 }

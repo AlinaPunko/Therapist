@@ -11,7 +11,8 @@ namespace Therapist.Data
         public static IQueryable<Visit> GetVisits()
         {
             TherapistContainer1 context = new TherapistContainer1();
-            return context.Visits;
+            var visits = context.Visits.Include("Doctor").Include("Patient");
+            return visits;
         }
 
         public static IQueryable<Visit> GetVisitsByPatientId(int patientId)
@@ -33,7 +34,13 @@ namespace Therapist.Data
         public static Visit GetVisitsById(int visitsId)
         {
             TherapistContainer1 context = new TherapistContainer1();
-            var visits = context.Visits.Where(p => p.VisitID == visitsId).FirstOrDefault();
+            var visits = context
+                                .Visits
+                                .Include("Doctor")
+                                .Include("Patient")
+                                .Where(p => p.VisitID == visitsId)
+                                .FirstOrDefault();
+            //var visits = context.Visits.Where(p => p.VisitID == visitsId).FirstOrDefault();
             context.Detach(visits);
             return visits;
         }
@@ -50,6 +57,7 @@ namespace Therapist.Data
                 context.Visits.AddObject(visits);
             }
             context.SaveChanges();
+            context.Detach(visits);
         }
 
         public static void UpdateVisit(Visit visits)
@@ -58,6 +66,7 @@ namespace Therapist.Data
             context.Visits.AddObject(visits);
             context.ObjectStateManager.ChangeObjectState(visits, System.Data.EntityState.Modified);
             context.SaveChanges();
+            context.Detach(visits);
         }
 
         public static void DeleteVisit(Visit visits)
