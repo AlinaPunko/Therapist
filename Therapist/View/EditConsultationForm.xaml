@@ -12,66 +12,50 @@
     <Grid>
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="12*"/>
-            <RowDefinition Height="28*"/>
-            <RowDefinition Height="14*"/>
-            <RowDefinition Height="99*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="33*"/>
-            <RowDefinition Height="42*"/>
-            <RowDefinition Height="30*"/>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="35*"/>
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="10*"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="38*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="82*"/>
-            <ColumnDefinition Width="31*"/>
-            <ColumnDefinition Width="24*"/>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="644*"/>
+            <ColumnDefinition Width="212*"/>
+            <ColumnDefinition Width="663*"/>
             <ColumnDefinition Width="41*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="9" Grid.RowSpan="14"/>
-        <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto"  Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click"  Grid.Column="8" Grid.Row="1">
+        <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto"  Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click"  Grid.Column="2" Margin="0,12,0,114">
             <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
         </Button>
-        <Rectangle RadiusY="15" RadiusX="15" Grid.RowSpan="14" Grid.ColumnSpan="6"/>
-        <Button x:Name="button" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="Auto" Height="Auto"  Grid.Row="3" Grid.Column="2" Margin="0,0,0,16" >
+        <Rectangle RadiusY="15" RadiusX="15" Grid.RowSpan="3"/>
+        <Button x:Name="button" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Padding="0" Width="Auto" Height="Auto" Margin="58,56,72,15" >
             <Button.Background>
                 <ImageBrush ImageSource="../Picture/note (4).png"  Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Label HorizontalContentAlignment="Center" Content="Консультация" FontSize="24" Grid.ColumnSpan="6" Grid.RowSpan="2"  Grid.Row="1"   />
-        <Label x:Name="label6" Content="№." Foreground="Black" FontFamily="Segoe UI Black" FontSize="16"  Grid.Row="4"/>
-        <Label x:Name="labelId" Content="0" Foreground="Black" FontFamily="Segoe UI Black" FontSize="16" Grid.ColumnSpan="4" HorizontalAlignment="Right" Width="149" Grid.Column="2" Grid.Row="4" />
-        <Label x:Name="labelDoctor" FontFamily="Segoe UI Black" FontSize="16" Content="Врач" Foreground="Black"  Grid.ColumnSpan="2" Grid.Row="5"/>
-        <TextBox x:Name="textBoxDoctorName" IsEnabled="False" Foreground="Black" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Выберите врача!" Grid.ColumnSpan="3"  Grid.Column="2" Grid.Row="5"/>
-        <Label x:Name="label3" Content="*" Foreground="Black"  Grid.Column="5" Grid.Row="5"/>
-        <Button x:Name="buttonLoadDoctor"  Content="Выбрать"  Height="Auto" ToolTip="Выбрать врача" Click="buttonLoadDoctor_Click" Grid.ColumnSpan="3" Grid.Row="7" Grid.Column="1"/>
-        <Label x:Name="labelPatient" Content="Пациент" Foreground="Black" FontFamily="Segoe UI Black" FontSize="18" Grid.Column="2" Grid.Row="8"/>
-        <Label x:Name="label1" Content="Имя" Foreground="Black" FontFamily="Segoe UI Black" FontSize="16"  Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="9"/>
-        <TextBox x:Name="textBoxPatientName" IsEnabled="False" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя пациента" Foreground="Black" Grid.ColumnSpan="4" Margin="0,0,16,0" Grid.Column="2" Grid.Row="9"/>
-        <Label x:Name="label8" Content="*" Foreground="White" Margin="483,12,145,0" Grid.Column="7" Grid.RowSpan="2" Grid.Row="1"/>
-        <Button x:Name="buttonLoadPatient" Content="Выбрать"  Height="Auto" ToolTip="Выбрать пациента" Click="buttonLoadPatient_Click" Grid.ColumnSpan="3" Grid.Column="1" Grid.Row="12"/>
-        <Label x:Name="labelScheduleDate" FontFamily="Segoe UI Black" FontSize="16" Content="Дата" Margin="11,12,572,0" Grid.Column="7" Grid.RowSpan="2" Grid.Row="1"/>
-        <DatePicker x:Name="dateTimePickerScheduleDate" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Назначить дату"  VerticalAlignment="Top" Width="177" Height="28" Grid.Column="7" Margin="71,12,0,0" Grid.Row="1" Grid.RowSpan="2"/>
-        <Label x:Name="label7" Content="*"  Margin="1,41,0,4" Grid.Column="5" Grid.Row="8" Grid.RowSpan="2"/>
-        <Label x:Name="labelScheduleTime"  FontFamily="Segoe UI Black" FontSize="16" Content="Время" Grid.ColumnSpan="3"/>
-        <materialDesign:TimePicker x:Name="dateTimePickerScheduleTime" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Время консультации"  VerticalAlignment="Top" Width="156" Height="27" Margin="449,15,0,0" Grid.RowSpan="2" Grid.Column="7" Grid.Row="1"/>
-        <Label x:Name="labelReason" FontFamily="Segoe UI Black" FontSize="14" Content="Причина консультации" Margin="0,2,452,0" Grid.Column="7" Grid.Row="4"/>
-        <TextBox x:Name="textBoxReason" materialDesign:HintAssist.Hint="С какой проблемой обратились" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap"  VerticalAlignment="Top" Width="461" Grid.Column="7" Margin="183,0,0,0" Grid.Row="4"/>
-        <Label x:Name="labelNotes" FontFamily="Segoe UI Black" FontSize="14" Content="Примечание" Margin="0,0,542,0" Grid.Column="7" Grid.Row="9"/>
-        <TextBox x:Name="textBoxNotes" HorizontalAlignment="Left" Height="30" materialDesign:HintAssist.Hint="Дополнительная информация"  TextWrapping="Wrap" VerticalAlignment="Top" Width="546" Grid.Column="7" Margin="98,0,0,0" Grid.Row="9"/>
-        <Button x:Name="buttonSave" Content="Записать" Click="buttonSave_Click" ToolTip="Записать консультацию" Height="Auto" Margin="297,0,215,0" Grid.Row="12" Grid.Column="7"/>
-        <Button x:Name="buttonClose" Style="{StaticResource MaterialDesignFlatButton}" ToolTip="Отменить запись и выйти" Content="Отменить и закрыть" Height="Auto" Margin="429,0,39,0" Click="buttonClose_Click" Grid.Row="12" Grid.Column="7"/>
-
+        <Label HorizontalContentAlignment="Center" Content="Консультация" FontSize="24" Margin="25,12,25,0"   />
+        <Label x:Name="label6" Content="№." Foreground="Black" FontFamily="Segoe UI Black" FontSize="16" Margin="4,1,178,0" Grid.Row="1"/>
+        <Label x:Name="labelId" Content="0" Foreground="Black" FontFamily="Segoe UI Black" FontSize="16" HorizontalAlignment="Right" Width="149"  Grid.Row="1" />
+        <Label x:Name="labelDoctor" FontFamily="Segoe UI Black" FontSize="16" Content="Врач" Foreground="Black" Margin="6,32,160,0" Grid.Row="1"/>
+        <TextBox x:Name="textBoxDoctorName" IsEnabled="False" Foreground="Black" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Выберите врача!" Margin="58,32,17,178" Grid.Row="1"/>
+        <Label x:Name="label3" Content="*" Foreground="Black" Margin="196,32,1,0" Grid.Row="1"/>
+        <Button x:Name="buttonLoadDoctor"  Content="Выбрать"  Height="Auto" ToolTip="Выбрать врача" Click="buttonLoadDoctor_Click" Margin="38,82,41,130" Grid.Row="1"/>
+        <Label x:Name="labelPatient" Content="Пациент" Foreground="Black" FontFamily="Segoe UI Black" FontSize="18" Margin="59,115,73,0" Grid.Row="1"/>
+        <Label x:Name="label1" Content="Имя" Foreground="Black" FontFamily="Segoe UI Black" FontSize="16" Margin="8,158,162,0" Grid.Row="1"/>
+        <TextBox x:Name="textBoxPatientName" IsEnabled="False" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя пациента" Foreground="Black" Margin="58,158,16,57" Grid.Row="1"/>
+        <Label x:Name="label8" Content="*" Foreground="White" Margin="502,24,145,0" Grid.Column="1"/>
+        <Button x:Name="buttonLoadPatient" Content="Выбрать"  Height="Auto" ToolTip="Выбрать пациента" Click="buttonLoadPatient_Click" Margin="38,204,41,5" Grid.Row="1" RenderTransformOrigin="0.541,-0.25"/>
+        <Label x:Name="labelScheduleDate" FontFamily="Segoe UI Black" FontSize="16" Content="Дата" Margin="38,24,581,0" Grid.Column="1"/>
+        <DatePicker x:Name="dateTimePickerScheduleDate" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Назначить дату"  VerticalAlignment="Top" Width="177" Height="28" Grid.Column="1" Margin="90,24,0,0"/>
+        <Label x:Name="label7" Content="*"  Margin="196,156,0,0" Grid.Row="1"/>
+        <Label x:Name="labelScheduleTime"  FontFamily="Segoe UI Black" FontSize="16" Content="Время" Margin="42,0,114,0"/>
+        <materialDesign:TimePicker x:Name="dateTimePickerScheduleTime" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Время консультации"  VerticalAlignment="Top" Width="156" Height="27" Margin="468,27,0,0" Grid.Column="1"/>
+        <Label x:Name="labelReason" FontFamily="Segoe UI Black" FontSize="14" Content="Причина консультации" Margin="35,3,468,0" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="textBoxReason" materialDesign:HintAssist.Hint="С какой проблемой обратились" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap"  VerticalAlignment="Top" Width="461" Grid.Column="1" Margin="202,1,0,0" Grid.Row="1"/>
+        <Label x:Name="labelNotes" FontFamily="Segoe UI Black" FontSize="14" Content="Примечание" Margin="24,158,547,0" Grid.Column="1" Grid.Row="1"/>
+        <TextBox x:Name="textBoxNotes" HorizontalAlignment="Left" Height="30" materialDesign:HintAssist.Hint="Дополнительная информация"  TextWrapping="Wrap" VerticalAlignment="Top" Width="546" Grid.Column="1" Margin="117,158,0,0" Grid.Row="1"/>
+        <StackPanel Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1" Margin="243,220,0,0" Grid.Row="1" Orientation="Horizontal" >
+            <Button x:Name="buttonSave" Content="Записать" Click="buttonSave_Click" ToolTip="Записать консультацию" Height="35" Width="200" />
+            <Button x:Name="buttonClose" Style="{StaticResource MaterialDesignFlatButton}" ToolTip="Отменить запись и выйти" Content="Отменить и закрыть"  Click="buttonClose_Click" Height="35" Width="200"/>
+        </StackPanel>
     </Grid>
 </Window>

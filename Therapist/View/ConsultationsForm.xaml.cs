@@ -157,7 +157,7 @@ namespace Therapist.View
             {
                 int consultationId = selectedConsultation.ConsultationID;
                 ConsultationDataAccess.DeleteConsultationById(consultationId);
-                this.Presenter.LoadAllConsultations();
+                this.Presenter.LoadConsultationsByCriterias();
             }
             catch (Exception ex)
             {

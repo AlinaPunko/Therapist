@@ -68,13 +68,13 @@ namespace Therapist.View
         }
         private Patient GetSelectedPatient()
         {
-            var row = this.dataGridViewResult.SelectedItem;//currentrow было вместо колумна
+            var row = this.dataGridViewResult.SelectedItem;
             if (row == null)
             {
                 return null;
             }
 
-            var patient = (Patient)row;//row.DataBoundItem;
+            var patient = (Patient)row;
             return patient;
         }
 
@@ -92,7 +92,7 @@ namespace Therapist.View
             set
             {
                 this.dataGridViewResult.AutoGenerateColumns = false;
-                this.dataGridViewResult.DataContext = value;//datasource был
+                this.dataGridViewResult.DataContext = value;
             }
         }
 
@@ -110,20 +110,20 @@ namespace Therapist.View
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            var row = this.dataGridViewResult.SelectedItem;//currentrow было вместо колумна
+            var row = this.dataGridViewResult.SelectedItem;
             if (row == null)
             {
                 return;
             }
 
-            if (MessageBox.Show("Вы действительно хотите удалить эту консультацию ? ", "Подтверждение удаления", MessageBoxButton.OKCancel) != MessageBoxResult.OK)//messageboxresult System.Windows.Forms.DialogResult
+            if (MessageBox.Show("Вы действительно хотите удалить этого пациента ? ", "Подтверждение удаления", MessageBoxButton.OKCancel) != MessageBoxResult.OK)//messageboxresult System.Windows.Forms.DialogResult
             {
                 return;
             }
 
             try
             {
-                var patient = (Patient)row;//row.DataBoundItem;
+                var patient = (Patient)row;
                 int patientId = patient.PatientID;
                 PatientsDataAccess.DeletePatientById(patientId);
 

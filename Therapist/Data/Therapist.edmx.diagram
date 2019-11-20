@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a18d1f8b1e1b49e78188a5e13a837530" Name="Diagram1" ZoomLevel="90" >
+      <Diagram DiagramId="a18d1f8b1e1b49e78188a5e13a837530" Name="Diagram1" ZoomLevel="58" >
         <EntityTypeShape EntityType="Therapist.Consultation" Width="1.5" PointX="2" PointY="2.25" />
         <EntityTypeShape EntityType="Therapist.Visit" Width="1.5" PointX="5.5" PointY="5.375" />
         <EntityTypeShape EntityType="Therapist.Doctor" Width="1.5" PointX="3.5" PointY="5.375" />
@@ -12,12 +12,25 @@
         <EntityTypeShape EntityType="Therapist.User" Width="1.5" PointX="4.5" PointY="2.25" />
         <AssociationConnector Association="Therapist.FK_Consultations_Doctors" />
         <AssociationConnector Association="Therapist.FK_Consultations_Patients" ManuallyRouted="true" >
-          <ConnectorPoint PointX="6.5" PointY="4.5499886067708326" />
-          <ConnectorPoint PointX="6.2113887435565722" PointY="4.5499886067708326" />
-          <ConnectorPoint PointX="6.2113887435565722" PointY="1.3908449681385271" />
-          <ConnectorPoint PointX="3.959907289056618" PointY="1.3908449681385271" />
-          <ConnectorPoint PointX="3.959907289056618" PointY="4.5499886067708326" />
-          <ConnectorPoint PointX="3.5" PointY="4.5499886067708326" />
+          <ConnectorPoint PointX="6.5" PointY="4.6148893229166656" />
+          <ConnectorPoint PointX="6.5" PointY="5.0864865780030915" />
+          <ConnectorPoint PointX="6.6979191666666669" PointY="5.0864865780030906" />
+          <ConnectorPoint PointX="6.8645858333333329" PointY="5.0864865780030915" />
+          <ConnectorPoint PointX="8.1415228019459214" PointY="5.0864865780030915" />
+          <ConnectorPoint PointX="8.1415228019459214" PointY="6.0439719140876527" />
+          <ConnectorPoint PointX="8.6249998201583935" PointY="6.0439719140876527" />
+          <ConnectorPoint PointX="8.3363885637149657" PointY="1.0546377723675793" />
+          <ConnectorPoint PointX="1.0058840824670847" PointY="1.0546377723675793" />
+          <ConnectorPoint PointX="1.0058840824670847" PointY="8.9454426294954139" />
+          <ConnectorPoint PointX="1.8557404125747448" PointY="8.9454426294954139" />
+          <ConnectorPoint PointX="1.3958331235181267" PointY="6.3016558333584864" />
+          <ConnectorPoint PointX="1.3958331235181267" PointY="7.3727763416216945" />
+          <ConnectorPoint PointX="1.4988295388347543" PointY="7.3727763416216936" />
+          <ConnectorPoint PointX="1.6654962055014209" PointY="7.3727763416216945" />
+          <ConnectorPoint PointX="2.4080458736542494" PointY="7.3727763416216945" />
+          <ConnectorPoint PointX="2.4080458736542494" PointY="5.4292061906333" />
+          <ConnectorPoint PointX="3.5" PointY="5.4292061906333" />
+          <ConnectorPoint PointX="3.5" PointY="4.9994921875" />
         </AssociationConnector>
         <AssociationConnector Association="Therapist.FK_Visits_Doctors" />
         <AssociationConnector Association="Therapist.FK_Visits_Patients" ManuallyRouted="false" >

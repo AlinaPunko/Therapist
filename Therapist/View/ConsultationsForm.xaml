@@ -16,11 +16,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="27*"/>
             <RowDefinition Height="53*"/>
-            <RowDefinition Height="100*"/>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="31*"/>
-            <RowDefinition Height="20*"/>
-            <RowDefinition Height="31*"/>
+            <RowDefinition Height="119*"/>
+            <RowDefinition Height="82*"/>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="32*"/>
             <RowDefinition Height="61*"/>
@@ -29,33 +26,25 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="151*"/>
-            <ColumnDefinition Width="19*"/>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="59*"/>
-            <ColumnDefinition Width="24*"/>
-            <ColumnDefinition Width="57*"/>
-            <ColumnDefinition Width="394*"/>
-            <ColumnDefinition Width="60*"/>
             <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="174*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="189*"/>
+            <ColumnDefinition Width="514*"/>
 
         </Grid.ColumnDefinitions>
-        <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="13" Grid.RowSpan="12" />
-        <Rectangle  Grid.RowSpan="12" Grid.ColumnSpan="5"/>
+        <Rectangle RadiusY="15" RadiusX="15" Fill="White" Grid.ColumnSpan="6" Grid.RowSpan="9" />
+        <Rectangle  Grid.RowSpan="9" Grid.ColumnSpan="4"/>
         <Button x:Name="ButtonClose" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Padding="0"
-                Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Margin="15,5,10,2" Grid.Column="11"
-                Grid.ColumnSpan="2">
+                Background="{x:Null}" BorderBrush="{x:Null}" Click="buttonCancel_Click" Margin="474,5,10,2" Grid.Column="5">
             <materialDesign:PackIcon Kind="Power"  Foreground="Black"/>
         </Button>
-        <materialDesign:PackIcon Kind="Calendar" Foreground="Blue" Height="30" Width="22" Grid.Row="4" Grid.Column="2" />
-        <materialDesign:PackIcon Kind="Calendar" Foreground="Blue" Height="30" Width="22" Grid.Row="6" Grid.Column="2" />
+        <materialDesign:PackIcon Kind="Calendar" Foreground="Blue" Height="30" Width="22" Grid.Row="3" Grid.Column="2" />
+        <materialDesign:PackIcon Kind="Calendar" Foreground="Blue" Height="30" Width="22" Grid.Row="3" Grid.Column="2" Margin="0,51,0,0" />
         <DataGrid x:Name="dataGridViewResult" ItemsSource="{Binding }" IsReadOnly="True" HorizontalAlignment="Left" Height="304"
                   VerticalAlignment="Top" Width="703" AlternatingRowBackground="#FFEEEEEE"  RowBackground ="White" 
                   Background="White"  BorderBrush="Black" Foreground="Black" OpacityMask="Black" FontFamily="ComicSans" 
-                  Grid.ColumnSpan="8" Grid.RowSpan="8" Grid.Column="5" Grid.Row="1" >
+                  Grid.ColumnSpan="2" Grid.RowSpan="5" Grid.Column="4" Grid.Row="1" >
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Дата" Width="auto"
@@ -72,24 +61,24 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Label Content="Поиск &#xA;Консультаций" FontSize="24" HorizontalContentAlignment="Center" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="4"/>
+        <Label Content="Поиск &#xA;Консультаций" FontSize="24" HorizontalContentAlignment="Center" Grid.RowSpan="2" Grid.Column="2" Margin="4,0,6,0"/>
         <Button x:Name="button" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}"
-                Padding="0" Width="Auto" Height="Auto" Margin="20,10,51,10" Grid.Row="2" Grid.Column="3">
+                Padding="0" Width="Auto" Height="Auto" Margin="42,10,51,29" Grid.Row="2" Grid.Column="2">
             <Button.Background>
                 <ImageBrush ImageSource="../Picture/note (2).png"  Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
         <DatePicker x:Name="dateTimePickerFrom" BorderBrush="Blue" materialDesign:HintAssist.Hint="От даты"  Height="30" 
-                    Grid.Row="4" Grid.Column="3" Margin="0,1,0,0"    />
+                    Grid.Row="3" Grid.Column="2" Margin="22,1,0,51"    />
         <DatePicker x:Name="dateTimePickerTo" BorderBrush="Blue" materialDesign:HintAssist.Hint="До даты"  Height="31" 
-                    VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="3"    />
-        <Button x:Name="buttonSearch" ToolTip="Искать консультацию" Content="Поиск"  Click="buttonSearch_Click" Grid.Row="8" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="3" Margin="0,0,18,0" />
-        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="212" Grid.Row="10"
-               Height="24" Grid.Column="1" Grid.ColumnSpan="4"/>
+                    VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="2" Margin="22,0,0,0"    />
+        <Button x:Name="buttonSearch" ToolTip="Искать консультацию" Content="Поиск"  Click="buttonSearch_Click" Grid.Row="5" VerticalAlignment="Top" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,18,0" />
+        <Label x:Name="lblMessage" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="212" Grid.Row="7"
+               Height="24" Grid.Column="1" Grid.ColumnSpan="3"/>
         <StatusBar x:Name="statusStripBottom" Background="White" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" 
-                   Width="681" Grid.ColumnSpan="8" Grid.Row="10" Grid.Column="5" Grid.RowSpan="2" />
+                   Width="681" Grid.ColumnSpan="2" Grid.Row="7" Grid.Column="4" Grid.RowSpan="2" />
 
-        <WrapPanel Grid.Column="7" Grid.Row="9" Grid.ColumnSpan="5" x:Name="panelButtons" >
+        <WrapPanel Grid.Column="4" Grid.Row="6" Grid.ColumnSpan="2" x:Name="panelButtons" Margin="107,0,35,0" Orientation="Horizontal">
             <Button x:Name="buttonEdit" Width="50"  Click="buttonEdit_Click" Style="{StaticResource MaterialDesignFloatingActionButton}"
                     ToolTip="Редактировать выбранную консультацию" Height="50" Grid.Column="6" Grid.Row="8">
                 <materialDesign:PackIcon
